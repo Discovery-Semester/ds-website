@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(2),
         marginTop: 'auto',
         backgroundColor: '#0a7a95',
+        textAlign: 'center'
     },
 }));
 
