@@ -10,6 +10,10 @@ import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
 import {changeLanguage} from "../../store/actions/languageActionCreator";
 import constants from "../../common/constants";
+import SideDrawer from "../SideDrawer";
+import MenuIcon from '@material-ui/icons/Menu';
+import {useMediaQuery} from 'react-responsive'
+import Aux from "../../hoc/Aux";
 
 
 const useStyles = makeStyles(theme => ({
@@ -19,7 +23,8 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         fontSize: '2rem',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        cursor: 'pointer'
         // flexGrow: 1,
     },
     languageButtons: {
@@ -28,11 +33,22 @@ const useStyles = makeStyles(theme => ({
     menuButtons: {
         all: 'unset',
         fontWeight: 'bold'
+    },
+    rightMenu: {
+        marginLeft: 'auto',
+        marginRight: 0,
+        display: 'flex'
+    },
+    logoImage: {
+        height: 90,
+        marginTop: -20,
+        marginBottom: -10
     }
 }));
 
 const Header = props => {
     const classes = useStyles();
+    const isBigScreen = useMediaQuery({minWidth: 992});
     return (
         <AppBar position="static"
                 style={{
@@ -40,55 +56,58 @@ const Header = props => {
                     alignItems: 'center',
                     position: 'relative'
                 }}>
-            <Toolbar style={{width: '80%'}}>
+            <Toolbar variant="regular" style={{
+                width: isBigScreen ? '80%' : '100%'
+            }}>
                 <IconButton edge="start" className={classes.menuButton} size="medium" color="inherit" aria-label="menu">
                     <NavLink style={{all: "unset"}} to="/">
-                        <img style={{
-                            height: 90,
-                            marginTop: -20,
-                            marginBottom: -10
-                        }} src={logo} alt="logo"/>
+                        <img className={classes.logoImage} src={logo} alt="logo"/>
                     </NavLink>
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
-                    <NavLink style={{all: "unset"}} to="/">DISCOVERY SEMESTER</NavLink>
+                    <NavLink style={{all: "unset"}} to="/">{constants.title}</NavLink>
                 </Typography>
 
-                <div style={{marginLeft: 'auto', marginRight: 0}}>
-                    <Button color="inherit">
-                        <NavLink className={classes.menuButtons} to="/mentees">
-                            {props.translation.mentees}
-                        </NavLink>
-                    </Button>
-
-                    <Button color="inherit">
-                        <NavLink className={classes.menuButtons} to="/mentors">
-                            {props.translation.mentors}
-                        </NavLink>
-                    </Button>
-
-                    <Button color="inherit">
-                        <NavLink className={classes.menuButtons} to="/news">
-                            {props.translation.news}
-                        </NavLink>
-                    </Button>
-
-                    <Button color="inherit">
-                        <NavLink className={classes.menuButtons} to="/about">
-                            {props.translation.about}
-                        </NavLink>
-                    </Button>
-                </div>
-                <div style={{fontWeight: 'bold', marginLeft: '1rem'}}>
-                    <div className={classes.languageButtons}
-                         onClick={() => props.onLanguageChange(constants.languages.EN)}>en
+                {isBigScreen ?
+                    <Aux>
+                        <div className={classes.rightMenu}>
+                            {[
+                                props.translation.mentees,
+                                props.translation.mentors,
+                                props.translation.news,
+                                props.translation.about,
+                            ].map((text, index) => (
+                                <Button key={index} color="inherit">
+                                    <NavLink className={classes.menuButtons} to={constants.routes[index]}>
+                                        {text}
+                                    </NavLink>
+                                </Button>
+                            ))}
+                        </div>
+                        <div style={{fontWeight: 'bold', marginLeft: '1rem'}}>
+                            {[
+                                constants.languages.EN,
+                                constants.languages.DE
+                            ].map((text, index) => (
+                                <div key={index} className={classes.languageButtons}
+                                     onClick={() => props.onLanguageChange(text)}>
+                                    {text}
+                                </div>
+                            ))}
+                        </div>
+                    </Aux>
+                    :
+                    <div className={classes.rightMenu}>
+                        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                            <MenuIcon fontSize="large"/>
+                        </IconButton>
+                        <SideDrawer/>
                     </div>
-                    <div className={classes.languageButtons}
-                         onClick={() => props.onLanguageChange(constants.languages.DE)}>de
-                    </div>
-                </div>
+                }
 
             </Toolbar>
+
+
         </AppBar>
     );
 };

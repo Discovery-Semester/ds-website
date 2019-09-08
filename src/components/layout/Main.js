@@ -3,6 +3,7 @@ import Container from "@material-ui/core/Container";
 import {makeStyles} from "@material-ui/core";
 import {Redirect, Route, Switch} from 'react-router-dom';
 import PageContent from '../pages/PageContent';
+import constants from "../../common/constants";
 
 const useStyles = makeStyles(theme => ({
     main: {
@@ -16,13 +17,7 @@ const Main = () => {
     return (
         <Container component="main" className={classes.main} maxWidth="sm">
                 <Switch>
-                    <Route exact path={[
-                        "/",
-                        "/mentees",
-                        "/mentors",
-                        "/news",
-                        "/about"
-                    ]} component={PageContent}/>
+                    <Route exact path={constants.routes} component={PageContent}/>
                     <Redirect to="/"/>
                 </Switch>
         </Container>
