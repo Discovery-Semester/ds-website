@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import Main from "./components/layout/Main";
 import Footer from "./components/layout/Footer";
 import {makeStyles} from "@material-ui/core";
+import {BrowserRouter} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -18,9 +19,11 @@ function App() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Header/>
-            <Main/>
-            <Footer/>
+            <BrowserRouter>
+                <Header/>
+                <Main/>
+                <Footer/>
+            </BrowserRouter>
         </div>
     );
 }

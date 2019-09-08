@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import ReactMarkdown from 'react-markdown';
 
-class Home extends Component {
+class Mentees extends Component {
     state = {
         content: ''
     };
 
     componentDidMount = async () => {
-        const response = await fetch('pages/de/home.md');
+        const response = await fetch('pages/de/mentees.md');
         const content = await response.text();
         this.setState({content});
     };
@@ -20,4 +20,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Mentees;
