@@ -5,6 +5,12 @@ import Main from "./components/layout/Main";
 import Footer from "./components/layout/Footer";
 import {makeStyles} from "@material-ui/core";
 import {BrowserRouter} from "react-router-dom";
+import {createStore} from "redux";
+import {Provider} from "react-redux";
+import rootReducer from './store/reducers/combineReducers';
+
+const store = createStore(rootReducer);
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,9 +26,11 @@ function App() {
     return (
         <div className={classes.root}>
             <BrowserRouter>
-                <Header/>
-                <Main/>
-                <Footer/>
+                <Provider store={store}>
+                    <Header/>
+                    <Main/>
+                    <Footer/>
+                </Provider>
             </BrowserRouter>
         </div>
     );

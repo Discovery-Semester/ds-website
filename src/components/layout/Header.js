@@ -7,6 +7,9 @@ import IconButton from '@material-ui/core/IconButton';
 import logo from '../../assets/logo.svg'
 import Button from "@material-ui/core/Button";
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux";
+import {changeLanguage} from "../../store/actions/languageActionCreator";
+import constants from "../../common/constants";
 
 
 const useStyles = makeStyles(theme => ({
@@ -21,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const Header = () => {
+const Header = props => {
     const classes = useStyles();
     return (
         <AppBar position="static"
@@ -49,8 +52,8 @@ const Header = () => {
                     <Button color="inherit"><NavLink style={{all: "unset"}} to="/about">About</NavLink></Button>
                 </div>
                 <div style={{fontWeight: 'bold', marginLeft: '1rem'}}>
-                    <div>en</div>
-                    <div>de</div>
+                    <div onClick={() => props.onLanguageChange(constants.languages.EN)}>en</div>
+                    <div onClick={() => props.onLanguageChange(constants.languages.DE)}>de</div>
                 </div>
 
             </Toolbar>
@@ -58,4 +61,16 @@ const Header = () => {
     );
 };
 
-export default Header;
+const mapStateToProps = state => {
+    return {
+        translation: state.languages.translation
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onLanguageChange: language => dispatch(changeLanguage(language)),
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
