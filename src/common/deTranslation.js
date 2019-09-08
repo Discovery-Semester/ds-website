@@ -1,6 +1,8 @@
 export default {
-    deTranslation: {
-        EN: "EN",
-        DE: "DE"
-    }
+    EN: "EN",
+    DE: "DE",
+    mentees: 'Mentees',
+    mentors: 'Mentorinen',
+    news: 'Neuigkeiten',
+    about: 'Über uns'
 }

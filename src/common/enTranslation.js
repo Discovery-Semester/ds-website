@@ -1,6 +1,8 @@
 export default {
-    enTranslation: {
-        EN: "EN",
-        DE: "DE"
-    }
+    EN: "EN",
+    DE: "DE",
+    mentees: 'Mentees',
+    mentors: 'Mentors',
+    news: 'News',
+    about: 'About'
 }

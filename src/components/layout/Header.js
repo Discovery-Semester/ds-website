@@ -21,6 +21,13 @@ const useStyles = makeStyles(theme => ({
         fontSize: '2rem',
         fontWeight: 'bold'
         // flexGrow: 1,
+    },
+    languageButtons: {
+        cursor: 'pointer'
+    },
+    menuButtons: {
+        all: 'unset',
+        fontWeight: 'bold'
     }
 }));
 
@@ -29,31 +36,56 @@ const Header = props => {
     return (
         <AppBar position="static"
                 style={{
-                    backgroundColor: '#0a7a95',
+                    backgroundColor: constants.styling.mainColor,
                     alignItems: 'center',
                     position: 'relative'
                 }}>
             <Toolbar style={{width: '80%'}}>
                 <IconButton edge="start" className={classes.menuButton} size="medium" color="inherit" aria-label="menu">
-                    <NavLink style={{all: "unset"}} to="/"><img style={{
-                        height: 90,
-                        marginTop: -20,
-                        marginBottom: -10
-                    }} src={logo} alt="logo"/></NavLink>
+                    <NavLink style={{all: "unset"}} to="/">
+                        <img style={{
+                            height: 90,
+                            marginTop: -20,
+                            marginBottom: -10
+                        }} src={logo} alt="logo"/>
+                    </NavLink>
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
                     <NavLink style={{all: "unset"}} to="/">DISCOVERY SEMESTER</NavLink>
                 </Typography>
 
                 <div style={{marginLeft: 'auto', marginRight: 0}}>
-                    <Button color="inherit"><NavLink style={{all: "unset"}} to="/mentees">Mentees</NavLink></Button>
-                    <Button color="inherit"><NavLink style={{all: "unset"}} to="/mentors">Mentors</NavLink></Button>
-                    <Button color="inherit"><NavLink style={{all: "unset"}} to="/news">News</NavLink></Button>
-                    <Button color="inherit"><NavLink style={{all: "unset"}} to="/about">About</NavLink></Button>
+                    <Button color="inherit">
+                        <NavLink className={classes.menuButtons} to="/mentees">
+                            {props.translation.mentees}
+                        </NavLink>
+                    </Button>
+
+                    <Button color="inherit">
+                        <NavLink className={classes.menuButtons} to="/mentors">
+                            {props.translation.mentors}
+                        </NavLink>
+                    </Button>
+
+                    <Button color="inherit">
+                        <NavLink className={classes.menuButtons} to="/news">
+                            {props.translation.news}
+                        </NavLink>
+                    </Button>
+
+                    <Button color="inherit">
+                        <NavLink className={classes.menuButtons} to="/about">
+                            {props.translation.about}
+                        </NavLink>
+                    </Button>
                 </div>
                 <div style={{fontWeight: 'bold', marginLeft: '1rem'}}>
-                    <div onClick={() => props.onLanguageChange(constants.languages.EN)}>en</div>
-                    <div onClick={() => props.onLanguageChange(constants.languages.DE)}>de</div>
+                    <div className={classes.languageButtons}
+                         onClick={() => props.onLanguageChange(constants.languages.EN)}>en
+                    </div>
+                    <div className={classes.languageButtons}
+                         onClick={() => props.onLanguageChange(constants.languages.DE)}>de
+                    </div>
                 </div>
 
             </Toolbar>
