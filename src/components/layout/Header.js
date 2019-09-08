@@ -32,7 +32,11 @@ const Header = () => {
                 }}>
             <Toolbar style={{width: '80%'}}>
                 <IconButton edge="start" className={classes.menuButton} size="medium" color="inherit" aria-label="menu">
-                    <NavLink style={{all: "unset"}} to="/"><img style={{height: 50}} src={logo} alt="logo"/></NavLink>
+                    <NavLink style={{all: "unset"}} to="/"><img style={{
+                        height: 90,
+                        marginTop: -20,
+                        marginBottom: -10
+                    }} src={logo} alt="logo"/></NavLink>
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
                     <NavLink style={{all: "unset"}} to="/">DISCOVERY SEMESTER</NavLink>
