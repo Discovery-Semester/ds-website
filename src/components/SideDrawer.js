@@ -12,6 +12,7 @@ import constants from "../common/constants";
 import Button from "@material-ui/core/Button";
 import {toggleSideDrawer} from "../store/actions/uiActionCreator";
 import {Link, NavLink} from "react-router-dom";
+import Aux from "../hoc/Aux";
 
 const useStyles = makeStyles({
     list: {
@@ -42,7 +43,6 @@ const SideDrawer = props => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
-        // setState({...state, open});
         props.onToggleSideDrawer(open);
     };
 
@@ -66,15 +66,16 @@ const SideDrawer = props => {
                     props.translation.news,
                     props.translation.about,
                 ].map((text, index) => (
-                    <Link key={index} style={{all: 'unset'}} className={classes.menuButtons}
-                          to={constants.routes[index]}>
-                        <ListItem button key={text}>
-                            <ListItemText primary={text}/>
-                        </ListItem>
-                    </Link>
+                    <Aux>
+                        <Link key={index} style={{all: 'unset'}} to={constants.routes[index]}>
+                            <ListItem button key={text}>
+                                <ListItemText primary={text}/>
+                            </ListItem>
+                        </Link>
+                        <Divider/>
+                    </Aux>
                 ))}
             </List>
-            <Divider/>
             <ListItem button key="Language">
                 <ListItemText primary={props.translation.language}/>
 

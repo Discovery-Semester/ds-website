@@ -22,14 +22,24 @@ const useStyles = makeStyles(theme => ({
         marginLeft: theme.spacing(0),
         marginRight: theme.spacing(0)
     },
+    logoButton: {
+        marginLeft: -theme.spacing(2),
+        marginRight: theme.spacing(0)
+    },
     title: {
         fontSize: '2rem',
         fontWeight: 'bold',
         cursor: 'pointer'
         // flexGrow: 1,
     },
+    languageButtonsBorder: {
+        cursor: 'pointer',
+        borderBottom: '0.1em solid white',
+        padding: '0.5em'
+    },
     languageButtons: {
-        cursor: 'pointer'
+        cursor: 'pointer',
+        padding: '0.5em'
     },
     menuButtons: {
         all: 'unset',
@@ -60,7 +70,9 @@ const Header = props => {
             <Toolbar variant="regular" style={{
                 width: isBigScreen ? '80%' : '100%'
             }}>
-                <IconButton edge="start" className={classes.menuButton} size="medium" color="inherit" aria-label="menu">
+                <IconButton edge="start" className={
+                    isBigScreen ? classes.menuButton : classes.logoButton
+                } size="medium" color="inherit" aria-label="menu">
                     <NavLink style={{all: "unset"}} to="/">
                         <img className={classes.logoImage} src={logo} alt="logo"/>
                     </NavLink>
@@ -78,11 +90,13 @@ const Header = props => {
                                 props.translation.news,
                                 props.translation.about,
                             ].map((text, index) => (
-                                <Button key={index} color="inherit">
-                                    <NavLink className={classes.menuButtons} to={constants.routes[index]}>
-                                        {text}
-                                    </NavLink>
-                                </Button>
+                                <div style={{borderRight: '0.1em solid white', padding: '0.5em'}}>
+                                    <Button key={index} color="inherit">
+                                        <NavLink className={classes.menuButtons} to={constants.routes[index]}>
+                                            {text}
+                                        </NavLink>
+                                    </Button>
+                                </div>
                             ))}
                         </div>
                         <div style={{fontWeight: 'bold', marginLeft: '1rem'}}>
@@ -90,7 +104,9 @@ const Header = props => {
                                 constants.languages.EN,
                                 constants.languages.DE
                             ].map((text, index) => (
-                                <div key={index} className={classes.languageButtons}
+                                <div key={index} className={
+                                    index === 0 ? classes.languageButtonsBorder : classes.languageButtons
+                                }
                                      onClick={() => props.onLanguageChange(text)}>
                                     {text}
                                 </div>
@@ -99,7 +115,8 @@ const Header = props => {
                     </Aux>
                     :
                     <div className={classes.rightMenu}>
-                        <IconButton onClick={() => props.onToggleSideDrawer(true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                        <IconButton onClick={() => props.onToggleSideDrawer(true)} edge="start"
+                                    className={classes.menuButton} color="inherit" aria-label="menu">
                             <MenuIcon fontSize="large"/>
                         </IconButton>
                         <SideDrawer/>

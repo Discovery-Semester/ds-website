@@ -7,7 +7,7 @@ import constants from "../../common/constants";
 
 const useStyles = makeStyles(theme => ({
     main: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(2),
         marginBottom: theme.spacing(2),
     }
 }));
