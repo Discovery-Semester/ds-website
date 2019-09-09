@@ -10,6 +10,7 @@ import {connect} from "react-redux";
 import logo from "../assets/logo-with-text-negativ.png";
 import constants from "../common/constants";
 import Button from "@material-ui/core/Button";
+import {toggleSideDrawer} from "../store/actions/uiActionCreator";
 
 const useStyles = makeStyles({
     list: {
@@ -34,15 +35,13 @@ const useStyles = makeStyles({
 
 const SideDrawer = props => {
     const classes = useStyles();
-    const [state, setState] = React.useState({
-        open: true
-    });
 
     const toggleDrawer = (open) => event => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
-        setState({...state, open});
+        // setState({...state, open});
+        props.onToggleSideDrawer(open);
     };
 
     const sideList = () => (
@@ -86,7 +85,7 @@ const SideDrawer = props => {
     );
 
     return (
-        <Drawer open={state.open} onClose={toggleDrawer(false)}>
+        <Drawer open={props.sideDrawerOpen} onClose={toggleDrawer(false)}>
             {sideList()}
         </Drawer>
     );
@@ -94,13 +93,15 @@ const SideDrawer = props => {
 
 const mapStateToProps = state => {
     return {
-        translation: state.languages.translation
+        translation: state.languages.translation,
+        sideDrawerOpen: state.ui.sideDrawerOpen
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         onLanguageChange: language => dispatch(changeLanguage(language)),
+        onToggleSideDrawer: open => dispatch(toggleSideDrawer(open))
     }
 };
 

@@ -14,6 +14,7 @@ import SideDrawer from "../SideDrawer";
 import MenuIcon from '@material-ui/icons/Menu';
 import {useMediaQuery} from 'react-responsive'
 import Aux from "../../hoc/Aux";
+import {toggleSideDrawer} from "../../store/actions/uiActionCreator";
 
 
 const useStyles = makeStyles(theme => ({
@@ -98,7 +99,7 @@ const Header = props => {
                     </Aux>
                     :
                     <div className={classes.rightMenu}>
-                        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                        <IconButton onClick={() => props.onToggleSideDrawer(true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <MenuIcon fontSize="large"/>
                         </IconButton>
                         <SideDrawer/>
@@ -121,6 +122,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onLanguageChange: language => dispatch(changeLanguage(language)),
+        onToggleSideDrawer: open => dispatch(toggleSideDrawer(open))
     }
 };
 
