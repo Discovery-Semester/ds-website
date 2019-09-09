@@ -19,7 +19,7 @@ import {toggleSideDrawer} from "../../store/actions/uiActionCreator";
 
 const useStyles = makeStyles(theme => ({
     menuButton: {
-        marginLeft: theme.spacing(2),
+        marginLeft: theme.spacing(0),
         marginRight: theme.spacing(0)
     },
     title: {
