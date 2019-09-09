@@ -11,6 +11,7 @@ import logo from "../assets/logo-with-text-negativ.png";
 import constants from "../common/constants";
 import Button from "@material-ui/core/Button";
 import {toggleSideDrawer} from "../store/actions/uiActionCreator";
+import {Link, NavLink} from "react-router-dom";
 
 const useStyles = makeStyles({
     list: {
@@ -22,6 +23,7 @@ const useStyles = makeStyles({
     logoContainer: {
         width: '100%',
         backgroundColor: constants.styling.mainColor,
+        cursor: 'pointer'
     },
     logo: {
         width: 280,
@@ -52,7 +54,9 @@ const SideDrawer = props => {
             onKeyDown={toggleDrawer(false)}
         >
             <div className={classes.logoContainer}>
-                <img className={classes.logo} src={logo} alt="logo"/>
+                <NavLink style={{all: "unset"}} to="/">
+                    <img className={classes.logo} src={logo} alt="logo"/>
+                </NavLink>
             </div>
             <Divider/>
             <List>
@@ -62,9 +66,12 @@ const SideDrawer = props => {
                     props.translation.news,
                     props.translation.about,
                 ].map((text, index) => (
-                    <ListItem onClick={() => console.log('clicked: ', text)} button key={text}>
-                        <ListItemText primary={text}/>
-                    </ListItem>
+                    <Link key={index} style={{all: 'unset'}} className={classes.menuButtons}
+                          to={constants.routes[index]}>
+                        <ListItem button key={text}>
+                            <ListItemText primary={text}/>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
             <Divider/>
@@ -75,7 +82,13 @@ const SideDrawer = props => {
                     constants.languages.EN,
                     constants.languages.DE
                 ].map((text, index) => (
-                    <Button className={classes.languageButton} key={index} color="inherit" variant="outlined">
+                    <Button onClick={() => props.onLanguageChange(text)}
+                            className={classes.languageButton}
+                            key={index}
+                            color="inherit"
+                            variant={
+                                props.currentLanguage === text ? 'contained' : 'outlined'
+                            }>
                         {text}
                     </Button>
                 ))}
@@ -94,6 +107,7 @@ const SideDrawer = props => {
 const mapStateToProps = state => {
     return {
         translation: state.languages.translation,
+        currentLanguage: state.languages.currentLanguage,
         sideDrawerOpen: state.ui.sideDrawerOpen
     };
 };
