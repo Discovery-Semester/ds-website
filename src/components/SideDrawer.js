@@ -66,8 +66,8 @@ const SideDrawer = props => {
                     props.translation.news,
                     props.translation.about,
                 ].map((text, index) => (
-                    <Aux>
-                        <Link key={index} style={{all: 'unset'}} to={constants.routes[index]}>
+                    <Aux key={index}>
+                        <Link style={{all: 'unset'}} to={constants.routes[index]}>
                             <ListItem button key={text}>
                                 <ListItemText primary={text}/>
                             </ListItem>

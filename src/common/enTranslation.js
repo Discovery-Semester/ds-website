@@ -5,5 +5,9 @@ export default {
     mentees: 'Mentees',
     mentors: 'Mentors',
     news: 'News',
-    about: 'About'
+    about: 'About',
+    quickLinks: 'Quick Links',
+    signUpMentees: 'Sign-Up Mentees',
+    signUpMentors: 'Sign-Up Mentors',
+    contact: 'Contact'
 }

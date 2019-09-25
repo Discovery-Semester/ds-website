@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import ReactMarkdown from 'react-markdown';
 import {connect} from "react-redux";
+import ContentRender from "./content/ContentRender";
 
-class PageContent extends Component {
+class Page extends Component {
     state = {
         content: ''
     };
@@ -34,7 +34,7 @@ class PageContent extends Component {
     render() {
         const {content} = this.state;
         return (
-            <ReactMarkdown source={content}/>
+            <ContentRender content={content}/>
         );
     }
 }
@@ -45,4 +45,4 @@ const mapStateToProps = state => {
     }
 };
 
-export default connect(mapStateToProps, null)(PageContent);
+export default connect(mapStateToProps, null)(Page);

@@ -90,8 +90,8 @@ const Header = props => {
                                 props.translation.news,
                                 props.translation.about,
                             ].map((text, index) => (
-                                <div style={{borderRight: '0.1em solid white', padding: '0.5em'}}>
-                                    <Button key={index} color="inherit">
+                                <div key={index} style={{borderRight: '0.1em solid white', padding: '0.5em'}}>
+                                    <Button color="inherit">
                                         <NavLink className={classes.menuButtons} to={constants.routes[index]}>
                                             {text}
                                         </NavLink>
