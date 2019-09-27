@@ -1,29 +1,28 @@
 import React from 'react';
 import useMediaQuery from "react-responsive/src/useMediaQuery";
 import ReactMarkdown from "react-markdown";
-import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Aux from "../../../hoc/Aux";
 import FbPagePlugin from "./FbPagePlugin";
 import QuickLinks from "./QuickLinks";
 
-const useStyles = makeStyles(theme => ({
-    container: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(12, 1fr)',
-        gridGap: theme.spacing(3),
-    },
-    paper: {
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        whiteSpace: 'nowrap',
-        marginBottom: theme.spacing(1),
-    },
-    divider: {
-        margin: theme.spacing(2, 0),
-    },
-}));
+// const useStyles = makeStyles(theme => ({
+//     container: {
+//         display: 'grid',
+//         gridTemplateColumns: 'repeat(12, 1fr)',
+//         gridGap: theme.spacing(3),
+//     },
+//     paper: {
+//         padding: theme.spacing(1),
+//         textAlign: 'center',
+//         color: theme.palette.text.secondary,
+//         whiteSpace: 'nowrap',
+//         marginBottom: theme.spacing(1),
+//     },
+//     divider: {
+//         margin: theme.spacing(2, 0),
+//     },
+// }));
 const ContentRender = props => {
     const isBigScreen = useMediaQuery({minWidth: 992});
     // const classes = useStyles();
