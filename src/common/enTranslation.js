@@ -6,7 +6,7 @@ export default {
     mentors: 'Mentors',
     news: 'News',
     about: 'About',
-    quickLinks: 'CIRCLECI Quick Links',
+    quickLinks: 'Quick Links',
     signUpMentees: 'Sign-Up Mentees',
     signUpMentors: 'Sign-Up Mentors',
     contact: 'Contact'
