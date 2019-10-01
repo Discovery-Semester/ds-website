@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import {connect} from "react-redux";
 import Link from "@material-ui/core/Link";
 import constants from "../../../common/constants";
+
 const useStyles = makeStyles(theme => ({
     root: {
         padding: theme.spacing(3, 2),
@@ -40,7 +41,8 @@ const PaperSheet = props => {
 
 const mapStateToProps = state => {
     return {
-        translation: state.languages.translation
+        translation: state.languages.translation,
+        currentLanguage: state.languages.currentLanguage
     };
 };
 
