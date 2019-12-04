@@ -27,6 +27,9 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: constants.styling.mainColor,
         textAlign: 'center'
     },
+    footerContact: {
+        color: 'rgba(0, 0, 0, 0.54)'
+    },
 }));
 
 export default function Footer() {
@@ -37,7 +40,7 @@ export default function Footer() {
             <CssBaseline/>
             <footer className={classes.footer}>
                 <Container maxWidth="sm">
-                    <Typography variant="body1"><a
+                    <Typography variant="body1"><a className={classes.footerContact}
                         href={"mailto:contact@discovery-semester.ch"}>contact@discovery-semester.ch</a></Typography>
                     <Copyright/>
 

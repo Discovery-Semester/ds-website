@@ -21,20 +21,26 @@ const PaperSheet = props => {
             <Typography variant="h5" component="h3">
                 {translation.quickLinks}
             </Typography>
-            {/* todo check the current language*/}
-            <Link href={constants.links.de.signUpMenteesURL} className={classes.link}>
-                {translation.signUpMentees}
-            </Link>
-            <Link href={constants.links.de.signUpMentorsURL} className={classes.link}>
-                {translation.signUpMentors}
-            </Link>
+            <Typography>
+                {/* todo check the current language*/}
+                <Link href={constants.links.de.signUpMenteesURL} className={classes.link}>
+                    {translation.signUpMentees}
+                </Link>
+            </Typography>
+            <Typography>
+                <Link href={constants.links.de.signUpMentorsURL} className={classes.link}>
+                    {translation.signUpMentors}
+                </Link>
+            </Typography>
 
             <Typography variant="h5" component="h3">
                 {translation.contact}
             </Typography>
-            <Link href={constants.links.contact} className={classes.link}>
-                {constants.links.contact}
-            </Link>
+            <Typography>
+                <Link href={constants.links.contact} className={classes.link}>
+                    {constants.links.contact}
+                </Link>
+            </Typography>
         </Paper>
     );
 };
