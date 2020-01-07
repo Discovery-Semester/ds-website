@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Grid from '@material-ui/core/Grid';
 import Aux from "../../../hoc/Aux";
 import FbPagePlugin from "./FbPagePlugin";
-import QuickLinks from "./QuickLinks";
+// import QuickLinks from "./QuickLinks";
 
 // const useStyles = makeStyles(theme => ({
 //     container: {
@@ -28,7 +28,7 @@ const ContentRender = props => {
     // const classes = useStyles();
     const pageContent = <ReactMarkdown source={props.content}/>;
     const fbPagePlugin = <FbPagePlugin/>;
-    const quickLinks = <QuickLinks/>;
+    // const quickLinks = <QuickLinks/>;
     return (
         isBigScreen ?
             <Grid container spacing={4}>
@@ -36,14 +36,14 @@ const ContentRender = props => {
                     {pageContent}
                 </Grid>
                 <Grid item xs={4}>
-                    {quickLinks}
+                    { /*quickLinks*/ }
                     {fbPagePlugin}
                 </Grid>
             </Grid>
             :
             <Aux>
                 {pageContent}
-                {quickLinks}
+                { /*quickLinks*/ }
                 {fbPagePlugin}
             </Aux>
     );
