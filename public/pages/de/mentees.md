@@ -28,19 +28,7 @@
 
 #### Anmeldung und Ablauf des Discovery Semester:
 
-- Asylsuchende und Geflüchtete, die sich für das Hörerprogramm interessieren, können sich ab sofort [online anmelden](https://forms.gle/iRryybmrG1mvVrb16). **Bewerbungsschluss ist der 14. Juli 2019**.
-
-- Ablauf der Bewerbung: Onlineformular ausfüllen (Fragebogen, kurzes Motivationsschreiben, Aufenthaltsbewilligung, gegebenenfalls Abschlusszeugnisse) und falls die Kriterien erfüllt werden, gibt es ein persönliches Gespräch im Juni/Juli.
-
-- Aufnahmebestätigung: Anfang August 2019.
-
-- Start: Vorlesungsbeginn des Herbstsemesters (16.09.2019).
-
-- Auswahl der Kurse erfolgt idealerweise schon vor Semesterbeginn, die Deadline ist das Ende der zweiten Semesterwoche
-
-- Dauer: Ein Semester (13 Wochen).
-
-- Ende: Vorlesungsende Herbstsemester (20.12.2019)
+Momentan ist keine Anmeldung möglich, wir aktualisieren diese Seite sobald sich das ändert.
 
 #### Bei Fragen [melde dich](mailto:contact@discovery-semester.ch) gerne bei uns!
 

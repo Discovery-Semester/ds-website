@@ -42,4 +42,5 @@ MentorInnen helfen den Mentees bei allen Fragen und Anliegen rund um das Studium
 
 - Offenheit gegenüber anderen Kulturen und Freude am Austausch.
 
-#### Falls du dich gerne als MentorIn anmelden möchtest, füll [dieses Formular](https://forms.gle/8CGnYF7qr3vh1cWc8) aus und falls du Fragen hast, [schreib uns](mailto:contact@discovery-semester.ch)!
+
+Im Moment suchen wir keine neuen MentorInnen. Wir werden diese Seite updaten und einen Eintrag im VSETH Newsletter senden sobald sich das ändert. Falls du dich im Organisationstema engagieren möchtes, bitte [melde dich](mailto:contact@discovery-semester.ch)!

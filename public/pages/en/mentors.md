@@ -43,4 +43,5 @@ Mentors help mentees with all questions and concerns connected to studying at ET
 
 - You are open towards other cultures and enjoy interacting with different people.
 
-If you would like to sign up as a mentor please fill [this form](https://forms.gle/n8wAspjdQakA7oh98) and if you have any questions [ask us](mailto:contact@discovery-semester.ch)!
+
+At the moment we are not looking for mentors. We will update this page and send an entry in the VSETH newsletter when that changes. Meanwhile we are looking for new team members - [contact us](mailto:contact@discovery-semester.ch) if you are interested.

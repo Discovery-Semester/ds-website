@@ -14,7 +14,7 @@
 
 - During the semester, several events are offered to project participants in order for them to get to know each other and foster the exchange between mentees and students.
 
-- To enroll as a full time student, the general [admission requirements](To enroll as a full time student, the general admission requirements of ETH Zurich apply.) of ETH Zurich apply.
+- To enroll as a full time student, the general [admission requirements](https://ethz.ch/en/studies/registration-application/bachelor/other-certificates.html) of ETH Zurich apply.
 
 #### Requirements for applicants:
 
@@ -26,19 +26,7 @@
 
 #### Registration and course of the Discovery Semester:
 
-- Asylum seekers and refugees who are interested in the program can now [register online](https://forms.gle/Jo5zdFVZdsGLCoYE6). **The application deadline is the 14th of July 2019.**
-
-- Application procedure: fill out the online form (questionnaire, short letter of motivation, scans of residence permit and diploma if available) and if you meet the criteria, you will be a invited to a personal interview in June/July.
-
-- Confirmation of admission to the program: beginning of August 2019
-
-- Starts with the fall semester (16.09.2019).
-
-- The courses are ideally chosen before the semester starts, the deadline is the end of the second week of the semester.
-
-- Duration: one semester (13 weeks).
-
-- Ends with the fall semester (20.12.2019).
+Registration is currently not possible. We will update this page as soon as this changes.
 
 #### If you have any questions feel free to [contact us](mailto:contact@discovery-semester.ch)!
 
