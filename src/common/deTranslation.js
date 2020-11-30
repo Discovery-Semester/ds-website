@@ -3,7 +3,7 @@ export default {
     DE: "DE",
     language: 'Sprache',
     mentees: 'Mentees',
-    mentors: 'Mentorinen',
+    mentors: 'MentorInnen',
     news: 'Neuigkeiten',
     about: 'Über uns',
     quickLinks: 'Schnellzugriff',
