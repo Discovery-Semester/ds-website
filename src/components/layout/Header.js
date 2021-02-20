@@ -32,6 +32,11 @@ const useStyles = makeStyles(theme => ({
         cursor: 'pointer'
         // flexGrow: 1,
     },
+    titleLink: {
+        all: 'unset',
+        // Chrome has a too specific default rule that applies otherwise
+        color: 'inherit',
+    },
     languageButtonsBorder: {
         cursor: 'pointer',
         borderBottom: '0.1em solid white',
@@ -43,7 +48,9 @@ const useStyles = makeStyles(theme => ({
     },
     menuButtons: {
         all: 'unset',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        // Chrome has a too specific default rule that applies otherwise
+        color: 'inherit',
     },
     rightMenu: {
         marginLeft: 'auto',
@@ -78,7 +85,7 @@ const Header = props => {
                     </NavLink>
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
-                    <NavLink style={{all: "unset"}} to="/">{constants.title}</NavLink>
+                    <NavLink className={classes.titleLink} style={{all: "unset"}} to="/">{constants.title}</NavLink>
                 </Typography>
 
                 {isBigScreen ?
@@ -92,7 +99,7 @@ const Header = props => {
                             ].map((text, index) => (
                                 <div key={index} style={{borderRight: '0.1em solid white', padding: '0.5em'}}>
                                     <Button color="inherit">
-                                        <NavLink className={classes.menuButtons} to={constants.routes[index]}>
+                                      <NavLink className={classes.menuButtons} to={constants.routes[index]}>
                                             {text}
                                         </NavLink>
                                     </Button>
