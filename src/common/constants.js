@@ -5,7 +5,7 @@ export default {
         DE: "de"
     },
     styling: {
-        mainColor: '#0a7a95'
+        mainColor: '#0076AA'
     },
     links: {
         en: {
