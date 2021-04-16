@@ -2,9 +2,8 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo-with-text-negative.svg'
 import Button from "@material-ui/core/Button";
 import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
@@ -25,17 +24,6 @@ const useStyles = makeStyles(theme => ({
     logoButton: {
         marginLeft: -theme.spacing(2),
         marginRight: theme.spacing(0)
-    },
-    title: {
-        fontSize: '2rem',
-        fontWeight: 'bold',
-        cursor: 'pointer'
-        // flexGrow: 1,
-    },
-    titleLink: {
-        all: 'unset',
-        // Chrome has a too specific default rule that applies otherwise
-        color: 'inherit',
     },
     languageButtonsBorder: {
         cursor: 'pointer',
@@ -58,9 +46,7 @@ const useStyles = makeStyles(theme => ({
         display: 'flex'
     },
     logoImage: {
-        height: 90,
-        marginTop: -20,
-        marginBottom: -10
+        height: 60,
     }
 }));
 
@@ -84,9 +70,6 @@ const Header = props => {
                         <img className={classes.logoImage} src={logo} alt="logo"/>
                     </NavLink>
                 </IconButton>
-                <Typography variant="h6" className={classes.title}>
-                    <NavLink className={classes.titleLink} style={{all: "unset"}} to="/">{constants.title}</NavLink>
-                </Typography>
 
                 {isBigScreen ?
                     <Aux>
