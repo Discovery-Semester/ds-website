@@ -2,7 +2,7 @@
 
 #### Are you interested in an academic education in Switzerland? Are you an asylum seeker and/or refugee? Then you've found the right project!
 
-We offer interested persons a bridge to the Federal Institute of Technology (ETH) Zurich. Our program is aimed at people who fled to Switzerland and/or are seekign asylum here. In particular we provide insight into the student life, that is lectures, planning of ones studies and preparations as well as social events with other students, new experiences and support for study-related questions.
+We offer interested persons a bridge to the Federal Institute of Technology (ETH) Zurich. Our program is aimed at people who fled to Switzerland and/or are seeking asylum here. In particular we provide insight into the student life, that is lectures, planning of ones studies and preparations as well as social events with other students, new experiences and support for study-related questions.
 
 If our project appeals to you, click [here](/mentees) for more information.
 
