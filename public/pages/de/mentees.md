@@ -1,34 +1,32 @@
-## Informationen für geflüchtete Personen/Mentees
+**Du bist geflüchtet und möchtest das Studium an der ETH Zürich kennenlernen?**
 
-#### Was ist das Discovery Semester?
+Bei uns bist Du genau richtig!
 
-- Geflüchtete und/oder Asylsuchende Personen (Mentees) können ein Semester lang kostenlos einzelne Lehrveranstaltungen an der ETH Zürich als Hörerin oder Hörer besuchen. Als Hörerinnen und Hörer können sie **keine Prüfungen** ablegen.
+**Was ist das “Discovery Semester”?**
 
-- Mentees erhalten nach Abschluss des Semesters eine Teilnahmebestätigung
+- Unser Verein bietet Dir als geflüchtete Person (Mentee) ein kostenloses Semester an der ETH Zürich als Hörerin oder Hörer. Du kannst einzelne Vorlesungen besuchen, aber keine Prüfungen schreiben.
+- Du wirst dabei von 1-2 Studierenden der ETH Zürich (MentorInnen) aus demselben oder einem ähnlichen Fachgebiet begleitet. Sie unterstützen Dich unter anderem bei folgendem:
+  - Auswahl der Vorlesungen
+  - ETH myStudies-Plattform
+  - Orientierung an der ETH (Campus, ETH-Einrichtungen und Services)
+  - Integration ins StudentInnenleben
+  - Sprachkenntnisse (meist Deutsch und Englisch)
+  - Sonstigen Fragen
+- Es gibt verschiedene Veranstaltungen, wo Du Dich mit anderen Mentees und MentorInnen austauschen und Deine Sprachkenntnisse verbessern kannst.
+- Nach Abschluss des Semesters erhältst Du als Mentee eine Teilnahmebestätigung.
 
-- Unterstützung während des Semesters erhalten sie von Mentorinnen und Mentoren, das sind Studierende der ETH Zürich aus demselben oder einem ähnlichen Fachgebiet. Ihre Unterstützung umfasst:
+**Voraussetzungen für eine Teilnahme als Mentee:**
 
-  - Beratung bei und Auswahl der Vorlesungen sowie Hilfe mit der mystudies-Plattform.
-  - Hilfe bei der Orientierung auf dem Campus und den ETH-Einrichtungen/Services.
-  - Integration der Mentees ins Studierendenleben.
+- Aufenthaltsbewilligung B, F oder N
+- Sprachkenntnisse in Deutsch (mindestens Niveau B1) oder Englisch (mindestens Niveau B1)
+- Allgemeine Hochschulreife (z.B. Matura, Abitur oder Äquivalent)
+- Angefangenes oder bereits abgeschlossenes Studium im Herkunftsland 
+- Interesse an einem Studiengang, welcher an der ETH angeboten wird ([hauptsächlich naturwissenschaftliche und technische Studiengänge](https://ethz.ch/de/studium/bachelor/studienangebot.html)). Für andere Studiengänge gibt es ein [ähnliches Schnupperprogramm an der Universität Zürich](https://www.int.uzh.ch/de/in/refugees.html) und vielen [andere Universitäten der Schweiz](https://www.perspektiven-studium.ch/hochschulprojekte-schweiz/).
+- Für die Zulassung für einen Studiengang an der ETH Zürich gelten für Mentees auch nach Teilnahme am Discovery Semester die allgemeinen Zulassungsbedingungen der ETH Zürich ([ETH Informationen für Geflüchtete](https://ethz.ch/de/studium/international-einreise-aufenthalt/fluechtlinge.html)).
 
-- Es werden diverse Veranstaltungen für die Teilnehmer angeboten, um den Austausch zwischen Mentees und Studierenden zu fördern.
+**Hier kannst Du Dich anmelden:**
 
-- Für eine Anmeldung zu einem Studiengang gelten für Mentees auch nach Teilnahme am Discovery Semester die [allgemeinen Zulassungsbedingungen](https://www.ethz.ch/de/studium/anmeldung-bewerbung/bachelor/andere-qual.html) der ETH Zürich.
+Momentan ist keine Anmeldung möglich. Wir aktualisieren diese Seite sobald sich das ändert.
 
-#### Voraussetzungen für die Teilnahme am Discovery Semester:
-
-- Akademischer Hintergrund: allgemeine Hochschulreife (z.B. Matura, Abitur) oder bereits angefangenes bzw. abgeschlossenes Studium.
-
-- Interesse an einem Studiengang, welcher an der ETH angeboten wird (hauptsächlich naturwissenschaftliche und technische Studiengänge). Für Interssierte an anderen Studiengängen verweisen wir gerne an das [Schnupperprogramm](https://www.int.uzh.ch/de/in/refugees/discovery-program.html) der Universität Zürich.
-
-- Ausreichende Sprachkenntnisse in Deutsch und/oder Englisch (mind. [Niveau B1](http://www.europaeischer-referenzrahmen.de/))
-
-- Aufenthaltsbewilligung [B](https://www.sem.admin.ch/sem/de/home/themen/aufenthalt/biometr_auslaenderausweis.html), [F oder N](https://www.sem.admin.ch/sem/de/home/themen/aufenthalt/nicht_eu_efta.html).
-
-#### Anmeldung und Ablauf des Discovery Semester:
-
-Momentan ist keine Anmeldung möglich, wir aktualisieren diese Seite sobald sich das ändert.
-
-#### Bei Fragen [melde dich](mailto:contact@discovery-semester.ch) gerne bei uns!
-
+**Hast Du noch Fragen? Schreib uns!**  
+[contact@discovery-semester.ch](mailto:contact@discovery-semester.ch)
