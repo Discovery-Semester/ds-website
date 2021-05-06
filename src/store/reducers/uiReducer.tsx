@@ -1,12 +1,12 @@
-import {TOGGLE_DRAWER_ACTION} from '../actions/actionTypes';
+import { Reducer } from 'redux';
+import {ActionTypes, IUIState, UIActions} from '../actions/actionTypes';
 
-const initialState = {
+const initialUIState: IUIState = {
     sideDrawerOpen: false
 };
 
-// TODO: Add type to action
-const uiReducer = (state = initialState, action:any) => {
-    if (action.type === TOGGLE_DRAWER_ACTION) {
+const uiReducer: Reducer<IUIState, UIActions> = (state = initialUIState, action) => {
+    if (action.type === ActionTypes.TOGGLE_DRAWER) {
         return {
             ...state,
             sideDrawerOpen: action.payload

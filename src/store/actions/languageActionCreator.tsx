@@ -1,10 +1,11 @@
-import {CHANGE_LANGUAGE_ACTION} from "./actionTypes";
+import { ActionCreator } from "redux";
+import { ActionTypes, IChangeLanguageAction } from "./actionTypes";
 
-
-// TODO: Add type to action
-export const changeLanguage = (language:any) => {
-    return {
-        type: CHANGE_LANGUAGE_ACTION,
-        payload: language
-    }
+export const changeLanguage: ActionCreator<IChangeLanguageAction> = (
+  language:string
+) => {
+  return {
+    type: ActionTypes.CHANGE_LANGUAGE,
+    payload: language,
+  };
 };
