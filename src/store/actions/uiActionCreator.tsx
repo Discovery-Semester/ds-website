@@ -1,8 +1,9 @@
-import {TOGGLE_DRAWER_ACTION} from "./actionTypes";
+import { ActionCreator } from "redux";
+import { ActionTypes, IToggleDrawerAction } from "./actionTypes";
 
-export const toggleSideDrawer = (open:any) => {
+export const toggleSideDrawer: ActionCreator<IToggleDrawerAction> = (open:any) => {
     return {
-        type: TOGGLE_DRAWER_ACTION,
+        type: ActionTypes.TOGGLE_DRAWER,
         payload: open
     }
 };
