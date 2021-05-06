@@ -12,7 +12,7 @@ import constants from "../common/constants";
 import Button from "@material-ui/core/Button";
 import {toggleSideDrawer} from "../store/actions/uiActionCreator";
 import {Link, NavLink} from "react-router-dom";
-import Aux from "../hoc/Aux";
+import Aux from "../hoc/Au_x";
 
 const useStyles = makeStyles({
     list: {
