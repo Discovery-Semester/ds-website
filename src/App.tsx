@@ -5,12 +5,10 @@ import Main from "./components/layout/Main";
 import Footer from "./components/layout/Footer";
 import {makeStyles} from "@material-ui/core";
 import {BrowserRouter} from "react-router-dom";
-import {createStore} from "redux";
 import {Provider} from "react-redux";
-import rootReducer from './store/reducers/combineReducers';
+import configureStore from './store/reducers/Store';
 
-const store = createStore(rootReducer);
-
+const store = configureStore();
 
 const useStyles = makeStyles(theme => ({
     root: {

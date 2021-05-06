@@ -13,6 +13,7 @@ import Button from "@material-ui/core/Button";
 import {toggleSideDrawer} from "../store/actions/uiActionCreator";
 import {Link, NavLink} from "react-router-dom";
 import Aux from "../utils/Au_x";
+import { IApplicationState } from '../store/reducers/Store';
 
 const useStyles = makeStyles({
     list: {
@@ -35,11 +36,18 @@ const useStyles = makeStyles({
     }
 });
 
+interface ISideDrawerProps {
+    translation: any,
+    currentLanguage: string,
+    sideDrawerOpen: boolean,
+    onLanguageChange: typeof changeLanguage,
+    onToggleSideDrawer: typeof toggleSideDrawer,
+}
 
-const SideDrawer = props => {
+const SideDrawer: React.FC<ISideDrawerProps> = props => {
     const classes = useStyles();
 
-    const toggleDrawer = (open) => event => {
+    const toggleDrawer = (open:boolean) => (event:any) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
@@ -105,18 +113,18 @@ const SideDrawer = props => {
     );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (store: IApplicationState) => {
     return {
-        translation: state.languages.translation,
-        currentLanguage: state.languages.currentLanguage,
-        sideDrawerOpen: state.ui.sideDrawerOpen
+        translation: store.languages.translation,
+        currentLanguage: store.languages.currentLanguage,
+        sideDrawerOpen: store.ui.sideDrawerOpen
     };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch:any) => {
     return {
-        onLanguageChange: language => dispatch(changeLanguage(language)),
-        onToggleSideDrawer: open => dispatch(toggleSideDrawer(open))
+        onLanguageChange: (language:string) => dispatch(changeLanguage(language)),
+        onToggleSideDrawer: (open:boolean) => dispatch(toggleSideDrawer(open))
     }
 };
 
