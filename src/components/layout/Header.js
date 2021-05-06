@@ -12,7 +12,7 @@ import constants from "../../common/constants";
 import SideDrawer from "../SideDrawer";
 import MenuIcon from '@material-ui/icons/Menu';
 import {useMediaQuery} from 'react-responsive'
-import Aux from "../../hoc/Aux";
+import Aux from "../../hoc/Au_x";
 import {toggleSideDrawer} from "../../store/actions/uiActionCreator";
 
 
