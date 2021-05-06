@@ -4,7 +4,8 @@ const initialState = {
     sideDrawerOpen: false
 };
 
-const uiReducer = (state = initialState, action) => {
+// TODO: Add type to action
+const uiReducer = (state = initialState, action:any) => {
     if (action.type === TOGGLE_DRAWER_ACTION) {
         return {
             ...state,

@@ -1,7 +1,7 @@
 import {CHANGE_LANGUAGE_ACTION} from '../actions/actionTypes';
-import constants from "../../common/constants";
-import deTranslation from "../../common/deTranslation";
-import enTranslation from "../../common/enTranslation";
+import constants from "../../utils/constants";
+import deTranslation from "../../utils/deTranslation";
+import enTranslation from "../../utils/enTranslation";
 
 const initialState = {
     languages: [
@@ -13,7 +13,8 @@ const initialState = {
     translation: enTranslation
 };
 
-const languageReducer = (state = initialState, action) => {
+// TODO: Add type to action
+const languageReducer = (state = initialState, action:any) => {
     switch (action.type) {
         case CHANGE_LANGUAGE_ACTION:
             switch (action.payload) {

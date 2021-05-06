@@ -8,11 +8,11 @@ import Button from "@material-ui/core/Button";
 import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
 import {changeLanguage} from "../../store/actions/languageActionCreator";
-import constants from "../../common/constants";
+import constants from "../../utils/constants";
 import SideDrawer from "../SideDrawer";
 import MenuIcon from '@material-ui/icons/Menu';
 import {useMediaQuery} from 'react-responsive'
-import Aux from "../../hoc/Au_x";
+import Aux from "../../utils/Au_x";
 import {toggleSideDrawer} from "../../store/actions/uiActionCreator";
 
 

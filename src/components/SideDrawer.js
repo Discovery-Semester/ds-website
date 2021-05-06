@@ -8,11 +8,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import {changeLanguage} from "../store/actions/languageActionCreator";
 import {connect} from "react-redux";
 import logo from "../assets/logo-with-text-negative.svg";
-import constants from "../common/constants";
+import constants from "../utils/constants";
 import Button from "@material-ui/core/Button";
 import {toggleSideDrawer} from "../store/actions/uiActionCreator";
 import {Link, NavLink} from "react-router-dom";
-import Aux from "../hoc/Au_x";
+import Aux from "../utils/Au_x";
 
 const useStyles = makeStyles({
     list: {

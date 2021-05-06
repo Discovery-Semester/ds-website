@@ -3,7 +3,7 @@ import Container from "@material-ui/core/Container";
 import {makeStyles} from "@material-ui/core";
 import {Redirect, Route, Switch} from 'react-router-dom';
 import PageContent from '../pages/Page';
-import constants from "../../common/constants";
+import constants from "../../utils/constants";
 
 const useStyles = makeStyles(theme => ({
     main: {
