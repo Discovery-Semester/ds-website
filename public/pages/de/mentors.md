@@ -29,7 +29,7 @@ Zentrale Aufgaben sind:
 
 **Hier kannst Du Dich anmelden:**
 
-Momentan ist keine Anmeldung möglich. Wir aktualisieren diese Seite sobald sich das ändert.
+Füll einfach [dieses Formular](https://docs.google.com/forms/d/e/1FAIpQLSffz10ZXBku0RzcT0GQP9dz55vrmZB0mSMrdwoBInR4GPooOA/viewform?usp=sf_link) aus.
 
 **Hast Du noch Fragen? Schreib uns!**  
 [contact@discovery-semester.ch](mailto:contact@discovery-semester.ch)

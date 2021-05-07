@@ -29,7 +29,7 @@ Your main tasks are:
 
 **Here you can sign up for the program:**
 
-At the moment registration is not possible. We will update this page as soon as this changes.
+Just fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSffz10ZXBku0RzcT0GQP9dz55vrmZB0mSMrdwoBInR4GPooOA/viewform?usp=sf_link).
 
 **Do you have any questions? Contact us!**  
 [contact@discovery-semester.ch](mailto:contact@discovery-semester.ch)

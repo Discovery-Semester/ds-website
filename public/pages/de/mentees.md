@@ -26,7 +26,8 @@ Bei uns bist Du genau richtig!
 
 **Hier kannst Du Dich anmelden:**
 
-Momentan ist keine Anmeldung möglich. Wir aktualisieren diese Seite sobald sich das ändert.
+Füll einfach [dieses Formular](https://docs.google.com/forms/d/e/1FAIpQLScqlNL28YcNBblMdOoIQpe8rqwPojdJ7C9td6YXXM0u4I023g/viewform?usp=sf_link) aus.  
+Anmeldeschluss ist am 4. Juli 2021 - bitte melde dich nach Möglichkeit schon früher an.
 
 **Hast Du noch Fragen? Schreib uns!**  
 [contact@discovery-semester.ch](mailto:contact@discovery-semester.ch)
