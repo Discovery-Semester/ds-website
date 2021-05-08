@@ -26,7 +26,7 @@ You've come to the right place!
 
 **Here you can sign up for the program:**
 
-Just fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLScqlNL28YcNBblMdOoIQpe8rqwPojdJ7C9td6YXXM0u4I023g/viewform?usp=sf_link).  
+Just fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLScqlNL28YcNBblMdOoIQpe8rqwPojdJ7C9td6YXXM0u4I023g/viewform?usp=sf_link). The number of participants is limited unfortunately, a registration is no guarantee yet that you can participate. Will will contact you for the next steps.  
 Registration deadline is 4 July 2021 - please register early if you can.
 
 **Do you have any questions? Contact us!**  
