@@ -19,11 +19,17 @@ import {toggleSideDrawer} from "../../store/actions/uiActionCreator";
 const useStyles = makeStyles(theme => ({
     menuButton: {
         marginLeft: theme.spacing(0),
-        marginRight: theme.spacing(0)
+        marginRight: theme.spacing(0),
+        "&:hover" : {
+            backgroundColor: 'inherit'
+        }
     },
     logoButton: {
         marginLeft: -theme.spacing(2),
-        marginRight: theme.spacing(0)
+        marginRight: theme.spacing(0),
+        "&:hover" : {
+            backgroundColor: 'inherit'
+        }
     },
     languageButtonsBorder: {
         cursor: 'pointer',
@@ -47,6 +53,11 @@ const useStyles = makeStyles(theme => ({
     },
     logoImage: {
         height: 60,
+    },
+    appBar: {
+        backgroundColor: constants.styling.mainColor,
+        alignItems: 'center',
+        position: 'relative'
     }
 }));
 
@@ -55,18 +66,14 @@ const Header = props => {
     const isBigScreen = useMediaQuery({minWidth: 992});
     return (
         <AppBar position="static"
-                style={{
-                    backgroundColor: constants.styling.mainColor,
-                    alignItems: 'center',
-                    position: 'relative'
-                }}>
+                className={classes.appBar}>
             <Toolbar variant="regular" style={{
                 width: isBigScreen ? '80%' : '100%'
             }}>
                 <IconButton edge="start" className={
                     isBigScreen ? classes.menuButton : classes.logoButton
                 } size="medium" color="inherit" aria-label="menu">
-                    <NavLink style={{all: "unset"}} to="/">
+                    <NavLink to="/">
                         <img className={classes.logoImage} src={logo} alt="logo"/>
                     </NavLink>
                 </IconButton>
