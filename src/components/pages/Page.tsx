@@ -1,8 +1,14 @@
-import React, {Component} from 'react';
-import {connect} from "react-redux";
+import React from 'react';
+import { connect } from "react-redux";
+import { IApplicationState } from '../../store/reducers/Store';
 import ContentRender from "./content/ContentRender";
 
-class Page extends Component {
+interface IProps {
+    currentLanguage: string,
+    match: any,
+}
+
+class Page extends React.Component<IProps> {
     state = {
         content: ''
     };
@@ -13,7 +19,7 @@ class Page extends Component {
         await this.fetchContent(language, path);
     };
 
-    componentDidUpdate = async (prevProps, prevState, snapshot) => {
+    componentDidUpdate = async (prevProps:IProps) => {
         const oldLanguage = prevProps.currentLanguage;
         const language = this.props.currentLanguage;
         const oldPath = prevProps.match.path;
@@ -23,7 +29,7 @@ class Page extends Component {
         }
     };
 
-    fetchContent = async (currentLanguage, path) => {
+    fetchContent = async (currentLanguage:string, path:string) => {
         // because if the path doesn't match any element from the list, we load the homepage
         const actualPath = path === '/' ? '/home' : path;
         const response = await fetch(`pages/${currentLanguage}${actualPath}.md`);
@@ -39,9 +45,9 @@ class Page extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (store: IApplicationState) => {
     return {
-        currentLanguage: state.languages.currentLanguage
+        currentLanguage: store.languages.currentLanguage
     }
 };
 

@@ -1,21 +1,22 @@
-import {CHANGE_LANGUAGE_ACTION} from '../actions/actionTypes';
-import constants from "../../common/constants";
-import deTranslation from "../../common/deTranslation";
-import enTranslation from "../../common/enTranslation";
+import { ActionTypes, ILanguageState, LanguageActions } from '../actions/actionTypes';
+import constants from "../../utils/constants";
+import deTranslation from "../../utils/deTranslation";
+import enTranslation from "../../utils/enTranslation";
+import { Reducer } from 'redux';
 
-const initialState = {
+const initialLanguageState: ILanguageState = {
     languages: [
         constants.languages.EN,
         constants.languages.DE
     ],
     defaultLanguage: constants.languages.EN,
     currentLanguage: constants.languages.EN,
-    translation: enTranslation
+    translation: enTranslation //TODO: Not sure why the translations are in the state... have to check it out !
 };
 
-const languageReducer = (state = initialState, action) => {
+const languageReducer: Reducer<ILanguageState, LanguageActions> = (state = initialLanguageState, action) => {
     switch (action.type) {
-        case CHANGE_LANGUAGE_ACTION:
+        case ActionTypes.CHANGE_LANGUAGE:
             switch (action.payload) {
                 case constants.languages.EN:
                     return {

@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import {connect} from "react-redux";
 import Link from "@material-ui/core/Link";
-import constants from "../../../common/constants";
+import constants from "../../../utils/constants";
 
 const useStyles = makeStyles(theme => ({
     root: {

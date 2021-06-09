@@ -6,8 +6,8 @@ import vsethLogo from '../../assets/vseth_Logo_bylines_organisation-white.svg'
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import Aux from "../../hoc/Au_x";
-import constants from '../../common/constants';
+import Aux from "../../utils/Au_x";
+import constants from '../../utils/constants';
 
 function Copyright() {
     return (

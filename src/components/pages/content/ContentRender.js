@@ -2,7 +2,7 @@ import React from 'react';
 import useMediaQuery from "react-responsive/src/useMediaQuery";
 import ReactMarkdown from "react-markdown";
 import Grid from '@material-ui/core/Grid';
-import Aux from "../../../hoc/Au_x";
+import Aux from "../../../utils/Au_x";
 import FbPagePlugin from "./FbPagePlugin";
 // import QuickLinks from "./QuickLinks";
 
