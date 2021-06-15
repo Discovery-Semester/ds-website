@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     footer: {
         padding: theme.spacing(2),
         marginTop: 'auto',
-        backgroundColor: constants.styling.mainColor,
+        backgroundColor: theme.color.primary,
         textAlign: 'center'
     },
     footerContact: {

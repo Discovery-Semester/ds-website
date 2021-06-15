@@ -15,6 +15,7 @@ const rootReducer = combineReducers<IApplicationState>({
 
 export default function configureStore(): Store<IApplicationState> {
     const store = createStore(rootReducer);
+    // You could apply middlewares here for example
     return store;
 }
 

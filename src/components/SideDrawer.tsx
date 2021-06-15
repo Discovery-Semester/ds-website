@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createStyles, withTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
@@ -8,34 +8,34 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
-import Aux from "../utils/Au_x";
 import { IApplicationState } from "../store/reducers/Store";
 import { changeLanguage } from "../store/actions/languageActionCreator";
 import { toggleSideDrawer } from "../store/actions/uiActionCreator";
 import logo from "../assets/logo-with-text-negative.svg";
 import constants from "../utils/constants";
 
-
-const useStyles = makeStyles({
-  list: {
-    width: 300,
-  },
-  fullList: {
-    width: "auto",
-  },
-  logoContainer: {
-    width: "100%",
-    backgroundColor: constants.styling.mainColor,
-    cursor: "pointer",
-  },
-  logo: {
-    width: 280,
-    margin: 10,
-  },
-  languageButton: {
-    marginLeft: 10,
-  },
-});
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    list: {
+      width: 300,
+    },
+    fullList: {
+      width: "auto",
+    },
+    logoContainer: {
+      width: "100%",
+      backgroundColor: theme.color.primary,
+      cursor: "pointer",
+    },
+    logo: {
+      width: 280,
+      margin: 10,
+    },
+    languageButton: {
+      marginLeft: 10,
+    },
+  })
+);
 
 interface ISideDrawerProps {
   translation: any;
@@ -48,49 +48,6 @@ interface ISideDrawerProps {
 const SideDrawer: React.FC<ISideDrawerProps> = (props) => {
   const classes = useStyles();
 
-  const sideListTabs = () => {
-    let list: JSX.Element[] = [
-      props.translation.mentees,
-      props.translation.mentors,
-      props.translation.news,
-      props.translation.about,
-    ].map((text, index) => (
-      <Aux key={index}>
-        <Link style={{ all: "unset" }} to={constants.routes[index]}>
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        </Link>
-        <Divider />
-      </Aux>
-    ));
-    list.push(
-      <React.Fragment>
-        <ListItem button key="Language">
-          <ListItemText primary={props.translation.language} />
-
-          {[constants.languages.EN, constants.languages.DE].map(
-            (text, index) => (
-              <Button
-                onClick={() => props.onLanguageChange(text)}
-                className={classes.languageButton}
-                key={index}
-                color="inherit"
-                variant={
-                  props.currentLanguage === text ? "contained" : "outlined"
-                }
-              >
-                {text}
-              </Button>
-            )
-          )}
-        </ListItem>
-        <Divider />
-      </React.Fragment>
-    );
-    return list;
-  };
-
   const toggleDrawer = (open: boolean) => (event: any) => {
     if (
       event.type === "keydown" &&
@@ -101,26 +58,61 @@ const SideDrawer: React.FC<ISideDrawerProps> = (props) => {
     props.onToggleSideDrawer(open);
   };
 
-  const sideList = () => (
-    <div
-      className={classes.list}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      <div className={classes.logoContainer}>
-        <NavLink style={{ all: "unset" }} to="/">
-          <img className={classes.logo} src={logo} alt="logo" />
-        </NavLink>
-      </div>
-      <Divider />
-      <List>{sideListTabs()}</List>
-    </div>
-  );
-
   return (
     <Drawer open={props.sideDrawerOpen} onClose={toggleDrawer(false)}>
-      {sideList()}
+      <div
+        className={classes.list}
+        role="presentation"
+        onClick={toggleDrawer(false)}
+        onKeyDown={toggleDrawer(false)}
+      >
+        <div className={classes.logoContainer}>
+          <NavLink style={{ all: "unset" }} to="/">
+            <img className={classes.logo} src={logo} alt="logo" />
+          </NavLink>
+        </div>
+        <Divider />
+        <List>
+          <Link style={{ all: "unset" }} to={"/news"}>
+            <ListItem button key="news">
+              <ListItemText primary={props.translation.tabs.news} />
+            </ListItem>
+          </Link>
+          <Divider />
+          <Link style={{ all: "unset" }} to={"/participate"}>
+            <ListItem button key="participate">
+              <ListItemText primary={props.translation.tabs.participate} />
+            </ListItem>
+          </Link>
+          <Divider />
+          <Link style={{ all: "unset" }} to={"/about"}>
+            <ListItem button key="about">
+              <ListItemText primary={props.translation.tabs.about} />
+            </ListItem>
+          </Link>
+          <Divider />
+          <ListItem button key="Language">
+            <ListItemText primary={props.translation.language} />
+
+            {[constants.languages.EN, constants.languages.DE].map(
+              (text, index) => (
+                <Button
+                  onClick={() => props.onLanguageChange(text)}
+                  className={classes.languageButton}
+                  key={index}
+                  color="inherit"
+                  variant={
+                    props.currentLanguage === text ? "contained" : "outlined"
+                  }
+                >
+                  {text}
+                </Button>
+              )
+            )}
+          </ListItem>
+          <Divider />
+        </List>
+      </div>
     </Drawer>
   );
 };
@@ -140,4 +132,5 @@ const mapDispatchToProps = (dispatch: any) => {
   };
 };
 
+withTheme(SideDrawer);
 export default connect(mapStateToProps, mapDispatchToProps)(SideDrawer);
