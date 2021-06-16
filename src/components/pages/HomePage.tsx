@@ -104,8 +104,8 @@ const useStyles = makeStyles((theme: Theme) =>
     quoteRow: {
       display: "flex",
       alignItems: "center",
-      paddingTop: "5vw",
-      paddingBottom: "5vw",
+      paddingTop: "5vh",
+      paddingBottom: "5vh",
       height: "calc(" + footerRowHeight + "vh - 40px)",
       flexWrap: "wrap",
     },
