@@ -11,7 +11,7 @@ const initialLanguageState: ILanguageState = {
     ],
     defaultLanguage: constants.languages.EN,
     currentLanguage: constants.languages.EN,
-    translation: enTranslation //TODO: Not sure why the translations are in the state... have to check it out !
+    translation: enTranslation
 };
 
 const languageReducer: Reducer<ILanguageState, LanguageActions> = (state = initialLanguageState, action) => {

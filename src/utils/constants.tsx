@@ -4,9 +4,6 @@ export default {
         EN: "en",
         DE: "de"
     },
-    styling: {
-        mainColor: '#0076AA'
-    },
     links: {
         en: {
             signUpMenteesURL: 'https://forms.gle/Pz5s3twaDN5VyimN8',
@@ -17,12 +14,5 @@ export default {
             signUpMentorsURL: 'https://forms.gle/8CGnYF7qr3vh1cWc8'
         },
         contact: 'contact@discovery-semester.ch'
-    },
-    routes: [
-        "/mentees",
-        "/mentors",
-        "/news",
-        "/about",
-        "/"
-    ]
+    }
 }
