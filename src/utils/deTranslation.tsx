@@ -24,9 +24,12 @@ export default {
     instagram: "Discovery Semester on Instagram",
   },
   participate: {
-    welcome: "News from the Discovery Semester",
-    next_dates: "Our next dates",
-    instagram: "Discovery Semester on Instagram",
+    title: "Was ist das Discovery Semester?",
+    redBoxTitle: 'Participate to the Discovery Semester',
+    redBoxMentee: 'Discover the studies at ETH by becoming a mentee',
+    redBoxMentor: 'Help a refugee with your knowledge as a mentor', 
+    redBoxMenteeButton: 'Become a Mentee',
+    redBoxMentorButton: 'Become a Mentor',
   },
   about: {
     welcome: "News from the Discovery Semester",

@@ -1,8 +1,12 @@
+.discovery p {
+    font-size: 1rem;
+}
 .discovery h2 {
     font-size: 2rem;
 }
-.discovery p {
-    font-size: 1rem;
+.discovery h3 {
+    font-weight: 500;
+    font-size: 1.25rem;
 }
 
 .discovery h4 {

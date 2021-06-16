@@ -24,17 +24,17 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <div className={classes.root}>
+        <BrowserRouter>
           <Provider store={store}>
             <Header />
             <Main />
             <Footer />
           </Provider>
-        </ThemeProvider>
-      </BrowserRouter>
-    </div>
+        </BrowserRouter>
+      </div>
+    </ThemeProvider>
   );
 }
 
