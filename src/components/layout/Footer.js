@@ -26,11 +26,12 @@ const useStyles = makeStyles(theme => ({
     footer: {
         padding: theme.spacing(2),
         marginTop: 'auto',
-        backgroundColor: theme.color.primary,
-        textAlign: 'center'
+        backgroundColor: "#bacad2",
+        textAlign: 'center',
+        color: "black",
     },
     footerContact: {
-        color: 'rgba(0, 0, 0, 0.54)'
+        color: 'black'
     },
     vsethImage: {
         height: 70,

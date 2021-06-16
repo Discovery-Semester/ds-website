@@ -1,8 +1,4 @@
-import {
-  createStyles,
-  makeStyles,
-  Theme,
-} from "@material-ui/core";
+import { createStyles, makeStyles, Theme } from "@material-ui/core";
 import React from "react";
 import { connect } from "react-redux";
 import { IApplicationState } from "../../store/reducers/Store";
@@ -10,6 +6,12 @@ import DiscoveryButton from "../generic/DiscoveryButton";
 import DiscoveryTextHeader from "../generic/DiscoveryTextHeader";
 import DiscoveryImage from "../generic/DiscoveryImage";
 import DiscoveryMarkdown from "../generic/DiscoveryMarkdown";
+import Slider from "react-slick";
+import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
+
+// Slider CSS
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface IHome {
   content: {
@@ -21,7 +23,7 @@ interface IHome {
   translation: any;
 }
 
-const footerRowHeight =  75;
+const footerRowHeight = 75;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     topRow: {
@@ -32,14 +34,21 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBlockStart: theme.spacing(0),
       marginBlockEnd: theme.spacing(0),
     },
+    headerText: {
+      position: "absolute",
+      top: "0",
+      left: "0",
+      display: "flex",
+      height: "100%",
+      alignItems: "center",
+      paddingLeft: "10vw",
+      paddingRight: "10vw",
+      maxWidth: "900px",
+    },
     mainRow: {
       backgroundColor: "white",
       display: "flex",
       flexDirection: "column",
-    },
-    footerRow: {
-      height: footerRowHeight + "vh",
-      display: "flex",
     },
     mainContent: {
       display: "flex",
@@ -59,6 +68,21 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "20%",
       height: "100%",
     },
+    mainWrapper: {
+      height: (footerRowHeight / 80) * 20 + "vh", // to make two similar triangles
+      display: "flex",
+      position: "relative",
+    },
+    participateButton: {
+      position: "absolute",
+      top: "15%",
+      left: "10vw",
+    },
+    footerRow: {
+      height: footerRowHeight + "vh",
+      display: "flex",
+      position: "relative",
+    },
     footerSpacer: {
       backgroundColor: "#f4f7f8",
       width: "20%",
@@ -69,66 +93,103 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "80%",
       height: "100%",
     },
-    mainWrapper: {
-      height: footerRowHeight/80 * 20 + "vh", // to make two similar triangles
-      display: "flex",
-      position: "relative",
-    },
-    headerText: {
+    slider: {
       position: "absolute",
-      top: "0",
-      left: "0",
+      top: 0,
+      left: 0,
+      width: "100%",
+      paddingLeft: "5vw",
+      paddingRight: "5vw",
+    },
+    quoteRow: {
       display: "flex",
-      height: "100%",
       alignItems: "center",
-      paddingLeft: "10vw",
-      paddingRight: "10vw",
-      maxWidth: "900px"
+      paddingTop: "5vw",
+      paddingBottom: "5vw",
+      height: "calc(" + footerRowHeight + "vh - 40px)",
+      flexWrap: "wrap",
     },
-    participateButton: {
+    quoteTextWrapper: {
+      position: "relative"
+    },
+    quoteMarkWrapper: {
       position: "absolute",
-      top: "15%",
-      left: "10vw",
+      top: "10px",
+      left: "-30px",
+      color: theme.color.red500,
     },
-    [theme.breakpoints.down('sm')]: {
+    quoteImageWrapper: {
+      width: "50%",
+      marginLeft: "5vw",
+      display: "flex",
+      alignItems: "center",
+    },
+    [theme.breakpoints.down("sm")]: {
       md: {
         width: "100vw",
-        paddingRight: "10vw"
+        paddingRight: "10vw",
       },
       imageWrapper: {
         paddingRight: "10vw",
         width: "100%",
       },
+      quoteImageWrapper: {
+        width: "100%",
+        marginLeft: "10vw",
+        marginRight: "10vw"
+      },
+      quoteTextWrapper: {
+        width: "100%",
+        marginLeft: "10vw",
+        marginRight: "10vw",
+      },
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       md: {
         width: "50vw",
-        paddingRight: "0"
+        paddingRight: "0",
       },
       imageWrapper: {
         paddingRight: "0",
         paddingLeft: "5vw",
         width: "35vw",
-        
+      },
+      quoteImageWrapper: {
+        width: "40%",
+        marginLeft: "5%",
+        marginRight: "0"
+      },
+      quoteTextWrapper: {
+        width: "35%",
+        marginLeft: "10%",
+        marginRight: "0",
       },
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down("md")]: {
       imageWrapper: {
         marginTop: 0,
-      }
+      },
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       imageWrapper: {
         marginTop: "-15vh",
         zIndex: 2,
-      }
-    }
+      },
+    },
   })
 );
 
 const HomeContent: React.FC<IHome> = (props) => {
   const classes = useStyles();
   const t = props.translation;
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div>
       <div className={classes.topRow}>
@@ -140,7 +201,9 @@ const HomeContent: React.FC<IHome> = (props) => {
       <div className={classes.mainRow}>
         <div className={classes.mainContent}>
           <div className={classes.md}>
-            <DiscoveryMarkdown source={props.content.mainContent}></DiscoveryMarkdown>
+            <DiscoveryMarkdown
+              source={props.content.mainContent}
+            ></DiscoveryMarkdown>
           </div>
           <div className={classes.imageWrapper}>
             <div className={classes.imagePosition}>
@@ -161,6 +224,55 @@ const HomeContent: React.FC<IHome> = (props) => {
       <div className={classes.footerRow}>
         <div className={classes.footerSpacer}></div>
         <div className={classes.footerBox}></div>
+        <div className={classes.slider}>
+          <Slider {...settings}>
+            <div> {/* Needed to escape element.style display=inline-block from the slider package*/}
+              <div className={classes.quoteRow}>
+                <div className={classes.quoteImageWrapper}>
+                  <DiscoveryImage src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
+                </div>
+                <div className={classes.quoteTextWrapper}>
+                  <div className={classes.quoteMarkWrapper}>
+                    <FormatQuoteIcon/>
+                  </div>
+                  <DiscoveryMarkdown
+                    source={props.content.firstQuote}
+                  ></DiscoveryMarkdown>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className={classes.quoteRow}>
+                <div className={classes.quoteImageWrapper}>
+                < DiscoveryImage width="30vw" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
+                </div>
+                <div className={classes.quoteTextWrapper}>
+                  <div className={classes.quoteMarkWrapper}>
+                    <FormatQuoteIcon/>
+                  </div>
+                  <DiscoveryMarkdown
+                    source={props.content.secondQuote}
+                  ></DiscoveryMarkdown>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className={classes.quoteRow}>
+                <div className={classes.quoteImageWrapper}>
+                < DiscoveryImage width="30vw" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
+                </div>
+                <div className={classes.quoteTextWrapper}>
+                  <div className={classes.quoteMarkWrapper}>
+                    <FormatQuoteIcon/>
+                  </div>
+                  <DiscoveryMarkdown
+                    source={props.content.thirdQuote}
+                  ></DiscoveryMarkdown>
+                </div>
+              </div>
+            </div>
+          </Slider>
+        </div>
       </div>
     </div>
   );
