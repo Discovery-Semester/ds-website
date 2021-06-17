@@ -17,7 +17,6 @@ You've come to the right place!
 
 **Requirements for the participation as a mentee:**
 
-- Residence permit B, F or N
 - Language skills in German (at least level B1) or English (at least level B1)
 - General university entrance qualification (e.g. Matura, Abitur or equivalent)
 - Started or already completed studies in the country of origin 

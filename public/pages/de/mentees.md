@@ -17,7 +17,6 @@ Bei uns bist Du genau richtig!
 
 **Voraussetzungen für eine Teilnahme als Mentee:**
 
-- Aufenthaltsbewilligung B, F oder N
 - Sprachkenntnisse in Deutsch (mindestens Niveau B1) oder Englisch (mindestens Niveau B1)
 - Allgemeine Hochschulreife (z.B. Matura, Abitur oder Äquivalent)
 - Angefangenes oder bereits abgeschlossenes Studium im Herkunftsland 
