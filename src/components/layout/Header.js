@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => createStyles({
     height: 60,
   },
   appBar: {
-    backgroundColor: theme.color.primary,
+    backgroundColor: theme.color.blue500,
     alignItems: "center",
     position: "relative",
   },

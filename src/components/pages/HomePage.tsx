@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: "35vh",
       display: "flex",
       position: "relative",
-      backgroundColor: theme.color.secondary,
+      backgroundColor: theme.color.grey500,
       marginBlockStart: theme.spacing(0),
       marginBlockEnd: theme.spacing(0),
     },
@@ -233,7 +233,7 @@ const HomeContent: React.FC<IHome> = (props) => {
                 </div>
                 <div className={classes.quoteTextWrapper}>
                   <div className={classes.quoteMarkWrapper}>
-                    <FormatQuoteIcon/>
+                    <FormatQuoteIcon />
                   </div>
                   <DiscoveryMarkdown
                     source={props.content.firstQuote}
@@ -244,11 +244,11 @@ const HomeContent: React.FC<IHome> = (props) => {
             <div>
               <div className={classes.quoteRow}>
                 <div className={classes.quoteImageWrapper}>
-                < DiscoveryImage width="30vw" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
+                  <DiscoveryImage width="30vw" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
                 </div>
                 <div className={classes.quoteTextWrapper}>
                   <div className={classes.quoteMarkWrapper}>
-                    <FormatQuoteIcon/>
+                    <FormatQuoteIcon />
                   </div>
                   <DiscoveryMarkdown
                     source={props.content.secondQuote}
@@ -259,11 +259,11 @@ const HomeContent: React.FC<IHome> = (props) => {
             <div>
               <div className={classes.quoteRow}>
                 <div className={classes.quoteImageWrapper}>
-                < DiscoveryImage width="30vw" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
+                  < DiscoveryImage width="30vw" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
                 </div>
                 <div className={classes.quoteTextWrapper}>
                   <div className={classes.quoteMarkWrapper}>
-                    <FormatQuoteIcon/>
+                    <FormatQuoteIcon />
                   </div>
                   <DiscoveryMarkdown
                     source={props.content.thirdQuote}

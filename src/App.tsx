@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/layout/Header";
-import Main from "./components/layout/Main";
+import Main from "./Routing";
 import Footer from "./components/layout/Footer";
 import { makeStyles } from "@material-ui/core";
 import { BrowserRouter } from "react-router-dom";

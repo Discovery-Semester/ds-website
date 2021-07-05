@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) =>
     },
     logoContainer: {
       width: "100%",
-      backgroundColor: theme.color.primary,
+      backgroundColor: theme.color.blue500,
       cursor: "pointer",
     },
     logo: {

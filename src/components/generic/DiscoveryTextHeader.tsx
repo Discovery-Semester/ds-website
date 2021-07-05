@@ -1,5 +1,5 @@
+import React, { ReactNode }  from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core';
-import React,{ ReactNode }  from 'react';
 
 type Props = {
     children: ReactNode;

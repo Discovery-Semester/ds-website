@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "white",
     },
     headerRow: {
-      backgroundColor: theme.color.secondary,
+      backgroundColor: theme.color.grey300,
       paddingLeft: "10%",
       paddingRight: "10%",
       height: "30vh",
@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     mainRowBox: {
       padding: "5% 10% 5% 10%",
-      backgroundColor: theme.color.secondary,
+      backgroundColor: theme.color.grey300,
     },
     mainRowButton: {
       margin: "5% 0 5% 0",

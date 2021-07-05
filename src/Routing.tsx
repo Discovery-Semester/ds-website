@@ -1,11 +1,9 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core";
 import { Redirect, Route, Switch } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import NewsPage from "../pages/NewsPage";
-import ParticipatePage from "../pages/ParticipatePage";
-import AboutPage from "../pages/AboutPage";
+import HomePage from "./components/pages/HomePage";
+import NewsPage from "./components/pages/NewsPage";
+import ParticipatePage from "./components/pages/ParticipatePage";
+import AboutPage from "./components/pages/AboutPage";
 
 
 

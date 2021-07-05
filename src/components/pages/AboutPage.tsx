@@ -17,7 +17,7 @@ interface IHome {
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
-      backgroundColor: theme.color.primary,
+      backgroundColor: theme.color.blue500,
     },
 }));
   

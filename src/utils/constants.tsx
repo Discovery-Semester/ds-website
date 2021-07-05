@@ -13,6 +13,7 @@ export default {
             signUpMenteesURL: 'https://forms.gle/iRryybmrG1mvVrb16',
             signUpMentorsURL: 'https://forms.gle/8CGnYF7qr3vh1cWc8'
         },
-        contact: 'contact@discovery-semester.ch'
+        contact: 'contact@discovery-semester.ch',
+        instagram: 'https://www.instagram.com/scoutsveveyse/?hl=en'
     }
 }

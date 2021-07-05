@@ -3,8 +3,9 @@ import {createMuiTheme} from "@material-ui/core/styles";
 declare module '@material-ui/core/styles/createMuiTheme' {
     interface Theme {
       color: {
-        primary: string;
-        secondary: string;
+        blue500: string;
+        grey500: string;
+        grey300: string;
         red300: string;
         red500: string;
         red500Transparent: string;
@@ -13,8 +14,9 @@ declare module '@material-ui/core/styles/createMuiTheme' {
     // allow configuration using `createMuiTheme`
     interface ThemeOptions {
       color?: {
-        primary?: string;
-        secondary?: string;
+        blue500?: string;
+        grey500?: string;
+        grey300?: string;
         red300?: string;
         red500?: string;
         red500Transparent?: string;
@@ -24,8 +26,9 @@ declare module '@material-ui/core/styles/createMuiTheme' {
 
 const theme = createMuiTheme({
     color: {
-        primary: '#0076AA',
-        secondary: '#e9eff1',
+        blue500: '#0076AA',
+        grey500: '#e9eff1',
+        grey300: '#f4f7f8',
         red300: '#ebb599',
         red500: '#cc4f19',
         red500Transparent: 'rgba(204, 79, 25, 0.5)'
