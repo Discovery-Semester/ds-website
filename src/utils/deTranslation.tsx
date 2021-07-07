@@ -14,7 +14,8 @@ export default {
     about: "Über uns",
   },
   home: {
-    welcome: "Schnuppersemester an der ETH für geflüchtete Personen mit akademischen Hintergrund",
+    welcome:
+      "Schnuppersemester an der ETH für geflüchtete Personen mit akademischen Hintergrund",
     next_dates: "Our next dates",
     instagram: "Discovery Semester on Instagram",
   },
@@ -25,13 +26,15 @@ export default {
   },
   participate: {
     title: "Was ist das Discovery Semester?",
-    redBoxTitle: 'Participate to the Discovery Semester',
-    redBoxMentee: 'Discover the studies at ETH by becoming a mentee',
-    redBoxMentor: 'Help a refugee with your knowledge as a mentor', 
-    redBoxMenteeButton: 'Become a Mentee',
-    redBoxMentorButton: 'Become a Mentor',
+    redBoxTitle: "Participate to the Discovery Semester",
+    redBoxMentee: "Discover the studies at ETH by becoming a mentee",
+    redBoxMentor: "Help a refugee with your knowledge as a mentor",
+    redBoxMenteeButton: "Become a Mentee",
+    redBoxMentorButton: "Become a Mentor",
   },
   about: {
-    welcome: "News from the Discovery Semester",
+    title: "Unser Team",
+    contact:
+      "Hast du Fragen? Möchtest du dich selber im Organisationsteam engagieren? Schreib uns!",
   },
 };

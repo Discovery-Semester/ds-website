@@ -34,6 +34,21 @@ const useStyles = makeStyles((theme) =>
     languageButton: {
       marginLeft: 10,
     },
+    drawerText: {
+      fontWeight: 600,
+      fontSize: "22px",
+      margin: "0 0 0 0",
+    },  
+    drawerBox: {
+      height: "60px",
+    },
+    drawerBoxLanguage:{
+      height: "60px",
+      justifyContent:"space-between",
+    },
+    drawerList: {
+      paddingTop: 0,
+    },
   })
 );
 
@@ -59,7 +74,7 @@ const SideDrawer: React.FC<ISideDrawerProps> = (props) => {
   };
 
   return (
-    <Drawer open={props.sideDrawerOpen} onClose={toggleDrawer(false)}>
+    <Drawer open={props.sideDrawerOpen} anchor={"right"} onClose={toggleDrawer(false)}>
       <div
         className={classes.list}
         role="presentation"
@@ -72,28 +87,28 @@ const SideDrawer: React.FC<ISideDrawerProps> = (props) => {
           </NavLink>
         </div>
         <Divider />
-        <List>
+        <List className={classes.drawerList}>
           <Link style={{ all: "unset" }} to={"/news"}>
-            <ListItem button key="news">
-              <ListItemText primary={props.translation.tabs.news} />
+            <ListItem className={classes.drawerBox} button key="news">
+              <p className={classes.drawerText}>{props.translation.tabs.news}</p>
             </ListItem>
           </Link>
           <Divider />
           <Link style={{ all: "unset" }} to={"/participate"}>
-            <ListItem button key="participate">
-              <ListItemText primary={props.translation.tabs.participate} />
+            <ListItem className={classes.drawerBox} button key="participate">
+              <p className={classes.drawerText}>{props.translation.tabs.participate}</p>
             </ListItem>
           </Link>
           <Divider />
           <Link style={{ all: "unset" }} to={"/about"}>
-            <ListItem button key="about">
-              <ListItemText primary={props.translation.tabs.about} />
+            <ListItem className={classes.drawerBox} button key="about">
+              <p className={classes.drawerText}>{props.translation.tabs.about}</p>
             </ListItem>
           </Link>
           <Divider />
-          <ListItem button key="Language">
-            <ListItemText primary={props.translation.language} />
-
+          <ListItem className={classes.drawerBoxLanguage} button key="Language">
+          <p className={classes.drawerText}>{props.translation.language}</p>
+            <div>
             {[constants.languages.EN, constants.languages.DE].map(
               (text, index) => (
                 <Button
@@ -109,6 +124,7 @@ const SideDrawer: React.FC<ISideDrawerProps> = (props) => {
                 </Button>
               )
             )}
+            </div>
           </ListItem>
           <Divider />
         </List>
