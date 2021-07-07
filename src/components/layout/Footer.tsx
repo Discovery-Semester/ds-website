@@ -1,26 +1,17 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import vsethLogo from "../../assets/vseth_Logo_bylines_organisation-white.svg";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Link from "@material-ui/core/Link";
 import Aux from "../../utils/Au_x";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import constants from "../../utils/constants";
 
-// TODO: Add social links
-
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <a>
-        discovery-semester.ch
-      </a>{" "}
-      {new Date().getFullYear()}
+      <a>Discovery Semester</a> {new Date().getFullYear()}
       {"."}
     </Typography>
   );
@@ -72,8 +63,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     footer: {
       flexDirection: "column",
-    }
-  }
+    },
+  },
 }));
 
 export default function Footer() {
@@ -106,10 +97,18 @@ export default function Footer() {
           <Copyright />
         </div>
         <div className={classes.socialLinks}>
-          <a className={classes.socialButton}>
+          <a
+            className={classes.socialButton}
+            target="_blank"
+            href={constants.links.instagram}
+          >
             <InstagramIcon className={classes.socialIcon} />
           </a>
-          <a className={classes.socialButton}>
+          <a
+            className={classes.socialButton}
+            target="_blank"
+            href={constants.links.facebook}
+          >
             <FacebookIcon className={classes.socialIcon} />
           </a>
         </div>
