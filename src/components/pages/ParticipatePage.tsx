@@ -5,7 +5,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { IApplicationState } from "../../store/reducers/Store";
 import DiscoveryButton from "../generic/DiscoveryButton";
@@ -14,12 +14,13 @@ import DiscoveryImage from "../generic/DiscoveryImage";
 import DiscoveryMarkdown from "../generic/DiscoveryMarkdown";
 import constants from "../../utils/constants";
 
-
 interface IParticipate {
   content: {
     topContent: string;
-    mainContent: string;
-    boxContent: string;
+    mentee: string;
+    menteeBox: string;
+    mentor: string;
+    mentorBox: string;
   };
   translation: any;
 }
@@ -73,9 +74,6 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: "10%",
       width: "35%",
       height: "100%",
-      display: "flex",
-      flexDirection: "column",
-      alignContent: "flex-end",
     },
     participateRowLeftColumn: {
       marginRight: "10%",
@@ -113,6 +111,15 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     mainRowContact: {
       margin: "5% 0 5% 0",
+      fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
+    },
+    contactLink: {
+      color: "black",
+      textDecoration: "none",
+      transition: "color 0.2s ease-in-out",
+      '&:hover' : {
+        color: "rgb(100, 100, 100)",
+      }
     },
     [theme.breakpoints.down("sm")]: {
       topImageWrapper: {
@@ -171,11 +178,19 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const ParticipateContent: React.FC<IParticipate> = (props) => {
-  const classes = useStyles();
   const t = props.translation;
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const [menteeMentor, setMenteeMentor] = useState("mentee");
+  const classes = useStyles();
 
+  const mainContent =
+    menteeMentor == "mentee" ? props.content.mentee : props.content.mentor;
+  const boxContent =
+    menteeMentor == "mentee"
+      ? props.content.menteeBox
+      : props.content.mentorBox;
+    
   const divider = matches ? (
     <div className={classes.dividerWrapper}>
       <div className={classes.divider}></div>
@@ -183,6 +198,7 @@ const ParticipateContent: React.FC<IParticipate> = (props) => {
   ) : (
     <div className={classes.divider}></div>
   );
+
   return (
     <div className={classes.root}>
       <div className={classes.headerRow}>
@@ -205,7 +221,7 @@ const ParticipateContent: React.FC<IParticipate> = (props) => {
             <div className={classes.participateRowText}>
               {t.participate.redBoxMentee}
             </div>
-            <DiscoveryButton to="">
+            <DiscoveryButton active={menteeMentor == "mentee"} onClick={() => setMenteeMentor("mentee")}>
               {t.participate.redBoxMenteeButton}
             </DiscoveryButton>
           </div>
@@ -214,21 +230,41 @@ const ParticipateContent: React.FC<IParticipate> = (props) => {
             <div className={classes.participateRowText}>
               {t.participate.redBoxMentor}
             </div>
-            <DiscoveryButton to="">
-              {t.participate.redBoxMenteeButton}
+            <DiscoveryButton active={menteeMentor == "mentor"} onClick={() => setMenteeMentor("mentor")}>
+              {t.participate.redBoxMentorButton}
             </DiscoveryButton>
           </div>
         </div>
       </div>
-      <div className={classes.mainRow}> 
-        <DiscoveryMarkdown className={classes.mainRowText} source={props.content.mainContent}></DiscoveryMarkdown>
+
+      <div className={classes.mainRow}>
+        <DiscoveryMarkdown
+          className={classes.mainRowText}
+          source={mainContent}
+        ></DiscoveryMarkdown>
         <div className={classes.mainRowRightColumn}>
-          <DiscoveryMarkdown className={classes.mainRowBox} source={props.content.boxContent}></DiscoveryMarkdown>
+          <DiscoveryMarkdown
+            className={classes.mainRowBox}
+            source={boxContent}
+          ></DiscoveryMarkdown>
           <div className={classes.mainRowButton}>
-            <DiscoveryButton to="/">Melde dich hier als Mentee an</DiscoveryButton>
+            {
+              menteeMentor == "mentee" ?
+              <DiscoveryButton nav={false} to={t.participate.signUpMenteeURL}>
+                {t.participate.signUpMentee}
+              </DiscoveryButton> :
+              <DiscoveryButton nav={false} to={t.participate.signUpMentorURL}>
+                {t.participate.signUpMentor}
+              </DiscoveryButton>
+            }
+           
           </div>
           <div className={classes.mainRowContact}>
-            Hast du noch Fragen? Schreib uns! {constants.links.contact}
+            {t.participate.questions}
+            <br />
+            <a href={"mailto:" + constants.links.contact} className={classes.contactLink}>
+              → {constants.links.contact}
+            </a>
           </div>
         </div>
       </div>
@@ -246,8 +282,10 @@ class ParticipatePage extends React.Component<IProps, IParticipate> {
   state = {
     content: {
       topContent: "",
-      mainContent: "",
-      boxContent: "",
+      mentee: "",
+      menteeBox: "",
+      mentor: "",
+      mentorBox: "",
     },
     translation: {},
   };
@@ -264,19 +302,27 @@ class ParticipatePage extends React.Component<IProps, IParticipate> {
     const responseTop = await fetch(
       `pages/${this.props.currentLanguage}/participate/topContent.md`
     );
-    const responseMain = await fetch(
-      `pages/${this.props.currentLanguage}/participate/mainContent.md`
+    const responseMentee = await fetch(
+      `pages/${this.props.currentLanguage}/participate/mentee.md`
     );
-    const responseBox = await fetch(
-      `pages/${this.props.currentLanguage}/participate/boxContent.md`
+    const responseMenteeBox = await fetch(
+      `pages/${this.props.currentLanguage}/participate/menteeBox.md`
+    );
+    const responseMentor = await fetch(
+      `pages/${this.props.currentLanguage}/participate/mentor.md`
+    );
+    const responseMentorBox = await fetch(
+      `pages/${this.props.currentLanguage}/participate/mentorBox.md`
     );
 
     const topContent = await responseTop.text();
-    const mainContent = await responseMain.text();
-    const boxContent = await responseBox.text();
+    const mentee = await responseMentee.text();
+    const menteeBox = await responseMenteeBox.text();
+    const mentor = await responseMentor.text();
+    const mentorBox = await responseMentorBox.text();
 
     this.setState({
-      content: { topContent, mainContent, boxContent },
+      content: { topContent, mentee, menteeBox, mentor, mentorBox },
     });
   };
   render() {

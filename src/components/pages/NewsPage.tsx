@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.color.grey300,
       paddingLeft: "10%",
       paddingRight: "10%",
-      height: "30vh",
+      height: "28vh",
       display: "flex",
       alignItems: "center",
     },
@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     [theme.breakpoints.down("md")]: {
       datesBox: {
-        margin: "5% 0 0 0",
+        margin: "5% 0 0 5%",
       },
       datesBoxHeader: {
         height: "60px",
@@ -117,6 +117,9 @@ const useStyles = makeStyles((theme: Theme) =>
       newsRow: {
         display: "flex",
         flexDirection: "column"
+      },
+      datesBox: {
+        margin: "5% 0 0 0",
       },
     },
   })

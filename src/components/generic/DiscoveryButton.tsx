@@ -1,10 +1,13 @@
-import React, { ReactNode } from "react";
+import React, { ReactFragment, ReactNode } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 type Props = {
   children: ReactNode;
-  to: string;
+  to?: string;
+  nav?: boolean;
+  onClick?: () => void;
+  active?: boolean;
 };
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -22,17 +25,49 @@ const useStyles = makeStyles((theme: Theme) =>
       "&:hover": {
         color: "white",
         backgroundColor: theme.color.red500,
-        boxShadow: "0 0"+ theme.color.red500,
+        boxShadow: "0 0" + theme.color.red500,
       },
+    },
+    activeButton: {
+      border: "2px solid " + theme.color.red500,
+      padding: "6px 9px 6px 10px",
+      fontWeight: 600,
+      backgroundColor: theme.color.red500,
+      color: "white",
+      fontSize: "1.25rem",
     },
   })
 );
 
 export default function DiscoveryButton(props: Props) {
   const classes = useStyles();
-  return (
-    <Link to={props.to}>
-      <button className={classes.button}>{props.children}</button>
-    </Link>
+
+  return props.to ? (
+    props.nav ? (
+      <Link to={props.to}>
+        <button
+          className={props.active ? classes.activeButton : classes.button}
+          onClick={props.onClick}
+        >
+          {props.children}
+        </button>
+      </Link>
+    ) : (
+      <a href={props.to} target="_blank">
+        <button
+          className={props.active ? classes.activeButton : classes.button}
+          onClick={props.onClick}
+        >
+          {props.children}
+        </button>
+      </a>
+    )
+  ) : (
+    <button
+      className={props.active ? classes.activeButton : classes.button}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </button>
   );
 }

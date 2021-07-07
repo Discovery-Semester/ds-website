@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     headerText: {
         fontSize: 'clamp(1.25rem,7vw, 2.5rem)',
-        fontWeight: 500,
+        fontWeight: 600,
         color: theme.color.red500,
     },
   }

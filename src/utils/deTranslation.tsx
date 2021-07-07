@@ -31,6 +31,11 @@ export default {
     redBoxMentor: "Help a refugee with your knowledge as a mentor",
     redBoxMenteeButton: "Become a Mentee",
     redBoxMentorButton: "Become a Mentor",
+    signUpMenteeURL: "https://forms.gle/iRryybmrG1mvVrb16",
+    signUpMentorURL: "https://forms.gle/8CGnYF7qr3vh1cWc8",
+    signUpMentee: "Melde dich hier als Mentee an",
+    signUpMentor: "Melde dich hier als Mentor an",
+    questions: "Hast du noch Fragen? Schreib uns!",
   },
   about: {
     title: "Unser Team",
