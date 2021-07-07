@@ -1,11 +1,8 @@
 import { createStyles, makeStyles, Theme } from "@material-ui/core";
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import { connect } from "react-redux";
 import { IApplicationState } from "../../store/reducers/Store";
-import DiscoveryButton from "../generic/DiscoveryButton";
 import DiscoveryTextHeader from "../generic/DiscoveryTextHeader";
-import DiscoveryImage from "../generic/DiscoveryImage";
 import DiscoveryMarkdown from "../generic/DiscoveryMarkdown";
 import DiscoveryTeamMember from "../generic/DiscoveryTeamMember";
 import constants from "../../utils/constants";
@@ -24,10 +21,9 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "white",
     },
     headerRow: {
-      backgroundColor: theme.color.blue500,
+      backgroundColor: theme.color.grey500,
       padding: "5% 10% 4% 10%",
     },
-
     headerContentWrapper: {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -43,6 +39,14 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
       gridColumn: "span 2 / auto",
       marginTop: "5%",
+    },
+    contactLink: {
+      color: "black",
+      textDecoration: "none",
+      transition: "color 0.2s ease-in-out",
+      '&:hover' : {
+        color: "rgb(100, 100, 100)",
+      }
     },
     [theme.breakpoints.down("sm")]: {
       contactBox: {
@@ -117,7 +121,8 @@ const AboutContent: React.FC<IAbout> = (props) => {
         </DiscoveryTeamMember>
         <div className={classes.contactBox}> 
           {t.about.contact}
-          <p>→ {constants.links.contact}</p>
+          <br />
+          <a href={"mailto:" + constants.links.contact} className={classes.contactLink}>→ {constants.links.contact}</a>
         </div>
       </div>
     </div>

@@ -6,7 +6,6 @@ import {
   useTheme,
 } from "@material-ui/core";
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import { connect } from "react-redux";
 import { IApplicationState } from "../../store/reducers/Store";
 import DiscoveryButton from "../generic/DiscoveryButton";

@@ -98,7 +98,7 @@ export default function Footer() {
           <Typography variant="body1">
             <a
               className={classes.footerContact}
-              href={"mailto:contact@discovery-semester.ch"}
+              href={"mailto:" + constants.links.contact}
             >
               contact@discovery-semester.ch
             </a>

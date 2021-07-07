@@ -32,16 +32,16 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "260px",
       marginLeft: "80px",
     },
-    image: (props:Props) => ({
+    image: {
         boxShadow: "6px 6px #B4CAD3",
         height: "330px",
         width: "260px",
         transition: "all 0.3s ease-in-out",
         objectFit: "cover",
         "&:hover": {
-          boxShadow: "0 0 " + theme.color.secondary,
+          boxShadow: "0 0 " + theme.color.grey300,
         },
-    }),
+    },
     [theme.breakpoints.down("sm")]: {
       quote: {
         marginLeft:0,
