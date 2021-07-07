@@ -21,9 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   footer: {
     display: "flex",
     padding: theme.spacing(2),
-    marginTop: "auto",
     backgroundColor: "#bacad2",
-    textAlign: "center",
     alignItems: "center",
     justifyContent: "space-between",
     color: "black",

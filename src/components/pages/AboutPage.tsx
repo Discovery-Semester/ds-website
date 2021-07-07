@@ -25,9 +25,8 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "5% 10% 4% 10%",
     },
     headerContentWrapper: {
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-      gap: "5%",
+      columnCount: 2,
+      paddingTop: "2%",
     },
     membersGrid: {
       display: "grid",
@@ -57,8 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
         gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr)))",
       },
       headerContentWrapper: {
-        display: "flex",
-        flexDirection: "column",
+        columnCount: 1,
       },
     }
   })

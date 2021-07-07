@@ -60,7 +60,6 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "5% 0 5% 0",
       position: "relative",
     },
-
     instagramFeed: {
       display: "flex",
       flexWrap: "wrap",
@@ -83,6 +82,7 @@ const useStyles = makeStyles((theme: Theme) =>
       left: 0,
       height: "100%",
       width: "100%",
+      display: "flex",
     },
     instagramBackgroundLeftBox: {
       background:
@@ -91,6 +91,8 @@ const useStyles = makeStyles((theme: Theme) =>
       height: "100%",
     },
     instagramBackgroundRightBox: {
+      height: "100%",
+      width: "30%",
       background: theme.color.grey300,
     },
     instagramContent: {
@@ -98,7 +100,23 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     [theme.breakpoints.down("md")]: {
       datesBox: {
-        margin: "8% 10% 0 10%",
+        margin: "5% 0 0 0",
+      },
+      datesBoxHeader: {
+        height: "60px",
+        paddingLeft: "8%",
+        backgroundColor: theme.color.grey500,
+        fontSize: "20px",
+        fontWeight: 500,
+      },
+      headerRowText: {
+        maxWidth: "100%",
+      },
+    },
+    [theme.breakpoints.down("sm")]: {
+      newsRow: {
+        display: "flex",
+        flexDirection: "column"
       },
     },
   })
@@ -133,6 +151,7 @@ const NewsContent: React.FC<INews> = (props) => {
       <div className={classes.instagramRow}>
         <div className={classes.instagramBackground}>
           <div className={classes.instagramBackgroundLeftBox}></div>
+          <div className={classes.instagramBackgroundRightBox}></div>
         </div>
         <div className={classes.instagramContent}>
           <div className={classes.instagramRowHeader}>
