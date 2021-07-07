@@ -89,7 +89,7 @@ export default function Footer() {
               className={classes.footerContact}
               href={"mailto:" + constants.links.contact}
             >
-              contact@discovery-semester.ch
+              {constants.links.contact}
             </a>
           </Typography>
           <Copyright />

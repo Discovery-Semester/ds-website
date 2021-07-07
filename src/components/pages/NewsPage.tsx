@@ -143,7 +143,7 @@ const NewsContent: React.FC<INews> = (props) => {
         <div>
           <div className={classes.datesBox}>
             <div className={classes.datesBoxHeader}>
-              Unsere nächste Termine
+              {t.news.next_dates}
             </div>
             <div className={classes.datesBoxContent}>
               <DiscoveryMarkdown source={props.content.nextDates} />
