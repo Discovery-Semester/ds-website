@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
     topRow: {
       display: "flex",
       flexWrap: "wrap",
+      justifyContent: "center",
     },
     topTextWrapper: {
       margin: "5% 10% 5% 10%",
@@ -117,7 +118,7 @@ const useStyles = makeStyles((theme: Theme) =>
     [theme.breakpoints.down("sm")]: {
       topImageWrapper: {
         margin: "0 10% 5% 10%",
-        width: "100%",
+        width: "70%",
       },
       topTextWrapper: {
         width: "100%",

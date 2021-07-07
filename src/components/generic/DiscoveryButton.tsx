@@ -18,11 +18,11 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "black",
       cursor: "pointer",
       fontSize: "1.25rem",
-      transition: "box-shadow 0.5s ease-in-out",
+      transition: "box-shadow 0.3s ease-in-out",
       "&:hover": {
         color: "white",
         backgroundColor: theme.color.red500,
-        boxShadow: "0 0",
+        boxShadow: "0 0"+ theme.color.red500,
       },
     },
   })

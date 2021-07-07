@@ -24,6 +24,11 @@ declare module '@material-ui/core/styles/createMuiTheme' {
     }
 }
 
+const karla = {
+  fontFamily: 'Karla',
+  fontWeight: 400,
+};
+
 const theme = createMuiTheme({
     color: {
         blue500: '#0076AA',
@@ -33,6 +38,10 @@ const theme = createMuiTheme({
         red500: '#cc4f19',
         red500Transparent: 'rgba(204, 79, 25, 0.5)'
     },
+    typography: {
+      "fontFamily": "'Karla', 'sans-serif'"
+    },
+    
 });
 
 export default theme;
