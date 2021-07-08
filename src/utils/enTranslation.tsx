@@ -14,7 +14,7 @@ export default {
     about: "About us",
   },
   home: {
-    welcome: "Trial semester at ETH for refugees with an academic background",
+    welcome: "Discovery Semester at ETH for refugees with an academic background",
     next_dates: "Our next dates",
     instagram: "Discovery Semester on Instagram",
   },

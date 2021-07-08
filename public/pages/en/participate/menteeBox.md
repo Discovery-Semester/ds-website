@@ -1,4 +1,5 @@
-# Mentee Box
-Occaecat enim elit anim esse nostrud sunt. Nisi et commodo quis dolor quis culpa sit sunt eiusmod exercitation do. Eu ad elit et aliquip tempor officia nulla minim ex. Mollit ad duis labore proident in ad amet aute deserunt ipsum aute minim. Adipisicing id sunt nulla irure et incididunt ad culpa qui minim. Ad consequat enim ut est eu sunt velit. Nostrud officia non quis elit minim veniam duis deserunt minim eu pariatur quis deserunt.
+### Requirements for the participation as a mentee:
 
-Nulla voluptate anim non cupidatat mollit Lorem dolor aliquip. Sint ad ipsum id nulla adipisicing sunt quis duis commodo eiusmod consequat ad fugiat consequat. Occaecat dolor excepteur officia duis reprehenderit ullamco aliqua ipsum. Consequat pariatur irure laboris laboris culpa quis ex enim esse tempor esse laboris. Excepteur aliqua exercitation elit nulla quis adipisicing voluptate do culpa occaecat amet labore. Incididunt non est pariatur esse mollit deserunt.
+- Language skills in German (at least level B1) or English (at least level B1)
+- General university entrance qualification (e.g. Matura, Abitur or equivalent) and/or started or already completed studies
+- Interest in a study program offered at ETH (mainly natural science and technical courses, see e.g. [bachelor programmes](https://ethz.ch/en/studies/bachelor/bachelors-degree-programmes.html). For other fields of study there is a [similar program at the University of Zurich](https://www.int.uzh.ch/en/in/refugees.html) and many [other universities in Switzerland](https://www.perspektiven-studium.ch/hochschulprojekte-schweiz/) (in German)).

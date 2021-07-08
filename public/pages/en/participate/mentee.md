@@ -1,5 +1,17 @@
-Occaecat enim elit anim esse nostrud sunt. Nisi et commodo quis dolor quis culpa sit sunt eiusmod exercitation do. Eu ad elit et aliquip tempor officia nulla minim ex. Mollit ad duis labore proident in ad amet aute deserunt ipsum aute minim. Adipisicing id sunt nulla irure et incididunt ad culpa qui minim. Ad consequat enim ut est eu sunt velit. Nostrud officia non quis elit minim veniam duis deserunt minim eu pariatur quis deserunt.
+### You are a refugee and would like to learn more about studying at ETH Zurich?
 
-Nulla voluptate anim non cupidatat mollit Lorem dolor aliquip. Sint ad ipsum id nulla adipisicing sunt quis duis commodo eiusmod consequat ad fugiat consequat. Occaecat dolor excepteur officia duis reprehenderit ullamco aliqua ipsum. Consequat pariatur irure laboris laboris culpa quis ex enim esse tempor esse laboris. Excepteur aliqua exercitation elit nulla quis adipisicing voluptate do culpa occaecat amet labore. Incididunt non est pariatur esse mollit deserunt.
+Our association offers refugees (mentees) like you a free semester at ETH Zurich as a listener. You can attend individual lectures, but you cannot take exams.
 
-Incididunt sit consectetur esse culpa labore aliquip culpa. Sunt quis consequat quis laboris. Anim dolore proident laborum amet esse nulla eu exercitation aliquip dolore qui nulla aliquip. Reprehenderit aute Lorem enim amet duis commodo nostrud irure cupidatat commodo.
+You will be accompanied by 1-2 students from ETH Zurich (mentors) from the same or a similar field of studies. They will support you with the following:
+
+- Selection of lectures
+- ETH myStudies platform
+- Orientation at ETH (Campus, ETH facilities and services)
+- Integration into student life
+- Language skills (mostly German and English)
+- Other questions
+
+There are various events where you can meet other mentees and mentors and improve your language skills.
+At the end of the semester you will receive a certificate of participation for mentees.
+
+For admission to a degree program at ETH Zurich, the [general admission requirements of ETH Zurich](https://ethz.ch/en/studies/international-immigration-housing/refugees.html) apply to mentees even after participation in the Discovery Semester .

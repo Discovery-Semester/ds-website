@@ -1,5 +1,16 @@
-Occaecat enim elit anim esse nostrud sunt. Nisi et commodo quis dolor quis culpa sit sunt eiusmod exercitation do. Eu ad elit et aliquip tempor officia nulla minim ex. Mollit ad duis labore proident in ad amet aute deserunt ipsum aute minim. Adipisicing id sunt nulla irure et incididunt ad culpa qui minim. Ad consequat enim ut est eu sunt velit. Nostrud officia non quis elit minim veniam duis deserunt minim eu pariatur quis deserunt.
+### Du bist geflüchtet und möchtest das Studium an der ETH Zürich kennenlernen?
 
-Nulla voluptate anim non cupidatat mollit Lorem dolor aliquip. Sint ad ipsum id nulla adipisicing sunt quis duis commodo eiusmod consequat ad fugiat consequat. Occaecat dolor excepteur officia duis reprehenderit ullamco aliqua ipsum. Consequat pariatur irure laboris laboris culpa quis ex enim esse tempor esse laboris. Excepteur aliqua exercitation elit nulla quis adipisicing voluptate do culpa occaecat amet labore. Incididunt non est pariatur esse mollit deserunt.
+Unser Verein bietet Dir als geflüchtete Person (Mentee) ein kostenloses Semester an der ETH Zürich als Hörerin oder Hörer. Du kannst einzelne Vorlesungen besuchen, aber keine Prüfungen schreiben.
+Du wirst dabei von 1-2 Studierenden der ETH Zürich (MentorInnen) aus demselben oder einem ähnlichen Fachgebiet begleitet. Sie unterstützen Dich unter anderem bei folgendem:
 
-Incididunt sit consectetur esse culpa labore aliquip culpa. Sunt quis consequat quis laboris. Anim dolore proident laborum amet esse nulla eu exercitation aliquip dolore qui nulla aliquip. Reprehenderit aute Lorem enim amet duis commodo nostrud irure cupidatat commodo.
+- Auswahl der Vorlesungen
+- ETH myStudies-Plattform
+- Orientierung an der ETH (Campus, ETH-Einrichtungen und Services)
+- Integration ins StudentInnenleben
+- Sprachkenntnisse (meist Deutsch und Englisch)
+- Sonstigen Fragen
+
+Es gibt verschiedene Veranstaltungen, wo Du Dich mit anderen Mentees und MentorInnen austauschen und Deine Sprachkenntnisse verbessern kannst.
+Nach Abschluss des Semesters erhältst Du als Mentee eine Teilnahmebestätigung.
+
+Für die Zulassung für einen Studiengang an der ETH Zürich gelten für Mentees auch nach Teilnahme am Discovery Semester die [allgemeinen Zulassungsbedingungen der ETH Zürich](https://ethz.ch/de/studium/international-einreise-aufenthalt/fluechtlinge.html).
