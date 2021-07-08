@@ -1,3 +1,9 @@
-Occaecat enim elit anim esse nostrud sunt. Nisi et commodo quis dolor quis culpa sit sunt eiusmod exercitation do. Eu ad elit et aliquip tempor officia nulla minim ex. Mollit ad duis labore proident in ad amet aute deserunt ipsum aute minim. Adipisicing id sunt nulla irure et incididunt ad culpa qui minim. Ad consequat enim ut est eu sunt velit. Nostrud officia non quis elit minim veniam duis deserunt minim eu pariatur quis deserunt.
+### Voraussetzungen für die Teilnahme als MentorIn:
 
-Nulla voluptate anim non cupidatat mollit Lorem dolor aliquip. Sint ad ipsum id nulla adipisicing sunt quis duis commodo eiusmod consequat ad fugiat consequat. Occaecat dolor excepteur officia duis reprehenderit ullamco aliqua ipsum. Consequat pariatur irure laboris laboris culpa quis ex enim esse tempor esse laboris. Excepteur aliqua exercitation elit nulla quis adipisicing voluptate do culpa occaecat amet labore. Incididunt non est pariatur esse mollit deserunt.
+- Immatrikulation an der ETH Zürich
+- 1-2 Stunden Zeit pro Woche
+- Verfügbarkeit in der ersten Woche des Semesters (idealerweise schon vorher), um dem Mentee bei der Kursauswahl zu helfen
+- Teilnahme am MentorInnen-Training zu Beginn des Semesters
+- Proaktive Kommunikation mit dem Mentee
+- Offenheit gegenüber anderen Kulturen und Freude am Austausch
+- Gute Deutschkenntnisse oder Englischkenntnisse

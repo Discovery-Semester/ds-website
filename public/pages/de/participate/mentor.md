@@ -1,3 +1,13 @@
-Occaecat enim elit anim esse nostrud sunt. Nisi et commodo quis dolor quis culpa sit sunt eiusmod exercitation do. Eu ad elit et aliquip tempor officia nulla minim ex. Mollit ad duis labore proident in ad amet aute deserunt ipsum aute minim. Adipisicing id sunt nulla irure et incididunt ad culpa qui minim. Ad consequat enim ut est eu sunt velit. Nostrud officia non quis elit minim veniam duis deserunt minim eu pariatur quis deserunt.
+### Du willst eine geflüchtete Person beim Kennenlernen der ETH unterstützen? 
+ 
+Geflüchtete Personen (Mentees) können ein Semester lang kostenlos einzelne Lehrveranstaltungen an der ETH Zürich als HörerInnen besuchen.
 
-Nulla voluptate anim non cupidatat mollit Lorem dolor aliquip. Sint ad ipsum id nulla adipisicing sunt quis duis commodo eiusmod consequat ad fugiat consequat. Occaecat dolor excepteur officia duis reprehenderit ullamco aliqua ipsum. Consequat pariatur irure laboris laboris culpa quis ex enim esse tempor esse laboris. Excepteur aliqua exercitation elit nulla quis adipisicing voluptate do culpa occaecat amet labore. Incididunt non est pariatur esse mollit deserunt.
+Dabei kannst Du als MentorIn einen Mentee aus demselben oder einem ähnlichen Fachgebiet zusammen mit einem anderen Studierenden der ETH Zürich begleiten. Du unterstützt Deinen Mentee bei allen Fragen und Anliegen rund um das Studium an der ETH. Zentrale Aufgaben sind:
+
+- Unterstützung bei der Auswahl der Vorlesungen und der myStudies-Plattform
+- Hilfe bei der Orientierung an der ETH (Campus, ETH-Einrichtungen und Services)
+- Integration ins StudentInnenleben (z.B. gemeinsames Essen, Sport oder soziale Kontakte)
+- Teilnahme an Events, an denen man andere MentorInnen und Mentees kennenlernen und sich mit ihnen austauschen kann
+- Hilfestellung geben bei Fragen der Mentees 
+- Feedback und Evaluation des Programms während des Semesters sowie zum Abschluss 
+- Kommunikation mit dem Organisationsteam bezüglich des Befindens und der Fortschritte des Mentees im Projekt
