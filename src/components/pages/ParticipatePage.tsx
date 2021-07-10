@@ -170,7 +170,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     [theme.breakpoints.up("md")]: {
       topImageWrapper: {
-        marginTop: "-25%",
+        margin: "-5% 5% 5% 5%",
         zIndex: 2,
       },
     },
