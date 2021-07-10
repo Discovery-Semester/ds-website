@@ -42,8 +42,8 @@ const useStyles = makeStyles((theme) => createStyles({
   menuButton: {
     all: "unset",
     fontWeight: "bold",
-    // Chrome has a too specific default rule that applies otherwise
     color: "inherit",
+    textTransform: "capitalize"
   },
   rightMenu: {
     marginLeft: "auto",
