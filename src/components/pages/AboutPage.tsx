@@ -13,6 +13,7 @@ interface IAbout {
     mainContent: string;
     images: any;
   };
+  currentLanguage: string;
   translation: any;
 }
 
@@ -22,7 +23,7 @@ interface IImage {
 }
 
 interface IIndexable {
-  [key: string]: string;
+  [key: string]: any;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -88,7 +89,7 @@ const AboutContent: React.FC<IAbout> = (props) => {
         {props.content.images.map((image: IImage) => (
           <DiscoveryTeamMember
             src={image.src}
-            name={image.name}>{(quotes as IIndexable)[image.name]}</DiscoveryTeamMember>
+            name={image.name}>{((quotes as IIndexable)[props.currentLanguage] as IIndexable)[image.name]}</DiscoveryTeamMember>
         ))}
         <div className={classes.contactBox}>
           {t.about.contact}
@@ -117,6 +118,7 @@ class AboutPage extends React.Component<IProps, IAbout> {
       images: [],
     },
     translation: {},
+    currentLanguage: ""
   };
 
 
@@ -154,6 +156,7 @@ class AboutPage extends React.Component<IProps, IAbout> {
       <AboutContent
         content={this.state.content}
         translation={this.props.translation}
+        currentLanguage={this.props.currentLanguage}
       ></AboutContent>
     );
   }
