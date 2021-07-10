@@ -7,11 +7,11 @@ import DiscoveryTextHeader from "../generic/DiscoveryTextHeader";
 import DiscoveryMarkdown from "../generic/DiscoveryMarkdown";
 import DiscoveryTeamMember from "../generic/DiscoveryTeamMember";
 import constants from "../../utils/constants";
-import quotes from "../../assets/team/quotes"
+import quotes from "../../assets/about/team/quotes"
 interface IAbout {
   content: {
     mainContent: string;
-    images: any;
+    images: IImage[];
   };
   currentLanguage: string;
   translation: any;
@@ -130,7 +130,7 @@ class AboutPage extends React.Component<IProps, IAbout> {
 
   componentDidMount = async () => {
     const images: any = this.importAll(
-      require.context("../../assets/team", false, /\.(png|jpe?g|svg)$/)
+      require.context("../../assets/about/team", false, /\.(png|jpe?g|svg)$/)
     );
     this.setState({ content: { ...this.state.content, images } });
     await this.fetchContent();

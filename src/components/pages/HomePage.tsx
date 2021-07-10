@@ -9,41 +9,58 @@ import DiscoveryMarkdown from "../generic/DiscoveryMarkdown";
 import Slider from "react-slick";
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
+import topImg from "../../assets/home/topImg.jpg"
+import quotes from "../../assets/home/quotes/quotes"
+
 // Slider CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+interface IImage {
+  src: string;
+  name: string;
+}
 interface IHome {
   content: {
     mainContent: string;
-    firstQuote: string;
-    secondQuote: string;
-    thirdQuote: string;
+    images: IImage[]
   };
   translation: any;
+  currentLanguage: string;
+}
+interface IIndexable {
+  [key: string]: any;
 }
 
-const footerRowHeight = 75;
+const sliderOffset = "40px";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      marginBottom: sliderOffset
+    },
     topRow: {
-      height: "35vh",
       display: "flex",
       position: "relative",
       backgroundColor: theme.color.grey500,
       marginBlockStart: theme.spacing(0),
       marginBlockEnd: theme.spacing(0),
     },
-    headerText: {
+    box: {
       position: "absolute",
-      top: "0",
-      left: "0",
+      top: 0,
+      left: 0,
+      background:
+        "linear-gradient(to bottom right, #f4f7f8 0%, #f4f7f8 50%, #e9eff1 50%, #e9eff1 100%)",
+      width: "30%",
+      height: "100%"
+    },
+    headerText: {
       display: "flex",
-      height: "100%",
+      padding: "5% 10% 5% 10%",
       alignItems: "center",
-      paddingLeft: "10vw",
-      paddingRight: "10vw",
       maxWidth: "900px",
+      zIndex: 2,
     },
     mainRow: {
       backgroundColor: "white",
@@ -56,20 +73,14 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: "5vh",
       flexWrap: "wrap",
     },
-    box: {
-      background:
-        "linear-gradient(to bottom right, #f4f7f8 0%, #f4f7f8 50%, #e9eff1 50%, #e9eff1 100%)",
-      width: "30vw",
-      height: "100%",
-    },
     mainBox: {
       background:
         "linear-gradient(to bottom left, #fff 0%, #fff 50%, #e9eff1 50%, #e9eff1 100%)",
       width: "20%",
-      height: "100%",
+      height: "100px",
     },
     mainWrapper: {
-      height: (footerRowHeight / 80) * 20 + "vh", // to make two similar triangles
+      height: "10%", // TODO: Make two similar triangles
       display: "flex",
       position: "relative",
     },
@@ -79,9 +90,16 @@ const useStyles = makeStyles((theme: Theme) =>
       left: "10vw",
     },
     footerRow: {
-      height: footerRowHeight + "vh",
       display: "flex",
       position: "relative",
+    },
+    footerBackground: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "calc(100% + " + sliderOffset + ")",
+      display: "flex",
     },
     footerSpacer: {
       backgroundColor: "#f4f7f8",
@@ -94,54 +112,51 @@ const useStyles = makeStyles((theme: Theme) =>
       height: "100%",
     },
     slider: {
-      position: "absolute",
-      top: 0,
-      left: 0,
       width: "100%",
-      paddingLeft: "5vw",
-      paddingRight: "5vw",
+      paddingLeft: "5%",
+      paddingRight: "5%",
     },
     quoteRow: {
       display: "flex",
       alignItems: "center",
-      paddingTop: "5vh",
-      paddingBottom: "5vh",
-      height: "calc(" + footerRowHeight + "vh - 40px)",
+      paddingTop: "5%",
+      paddingBottom: "5%",
       flexWrap: "wrap",
     },
     quoteTextWrapper: {
-      position: "relative"
+      position: "relative",
+      fontSize: "clamp(1rem, 2vw, 2rem)",
+      fontWeight: 600,
     },
     quoteMarkWrapper: {
       position: "absolute",
-      top: "10px",
+      top: "-10px",
       left: "-30px",
       color: theme.color.red500,
     },
     quoteImageWrapper: {
-      width: "50%",
-      marginLeft: "5vw",
+      width: "30%",
+      marginLeft: "5%",
       display: "flex",
       alignItems: "center",
     },
     [theme.breakpoints.down("sm")]: {
       md: {
         width: "100vw",
-        paddingRight: "10vw",
+        paddingRight: "10%",
       },
       imageWrapper: {
-        paddingRight: "10vw",
+        paddingRight: "10%",
         width: "100%",
       },
       quoteImageWrapper: {
         width: "100%",
-        marginLeft: "10vw",
-        marginRight: "10vw"
+        marginLeft: "10%",
+        marginRight: "10%"
       },
       quoteTextWrapper: {
         width: "100%",
-        marginLeft: "10vw",
-        marginRight: "10vw",
+        margin: "5% 10% 5% 10%"
       },
     },
     [theme.breakpoints.up("sm")]: {
@@ -151,17 +166,16 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       imageWrapper: {
         paddingRight: "0",
-        paddingLeft: "5vw",
-        width: "35vw",
+        paddingLeft: "5%",
+        width: "35%",
       },
       quoteImageWrapper: {
-        width: "40%",
         marginLeft: "5%",
         marginRight: "0"
       },
       quoteTextWrapper: {
-        width: "35%",
-        marginLeft: "10%",
+        width: "50%",
+        marginLeft: "15%",
         marginRight: "0",
       },
     },
@@ -172,7 +186,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     [theme.breakpoints.up("md")]: {
       imageWrapper: {
-        marginTop: "-15vh",
+        marginTop: "-15%",
         zIndex: 2,
       },
     },
@@ -191,7 +205,7 @@ const HomeContent: React.FC<IHome> = (props) => {
     slidesToScroll: 1,
   };
   return (
-    <div>
+    <div className={classes.root}>
       <div className={classes.topRow}>
         <div className={classes.box}></div>
         <div className={classes.headerText}>
@@ -207,7 +221,7 @@ const HomeContent: React.FC<IHome> = (props) => {
           </div>
           <div className={classes.imageWrapper}>
             <div className={classes.imagePosition}>
-              <DiscoveryImage src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
+              <DiscoveryImage src={topImg}></DiscoveryImage>
             </div>
           </div>
         </div>
@@ -220,57 +234,32 @@ const HomeContent: React.FC<IHome> = (props) => {
           </div>
         </div>
       </div>
-
       <div className={classes.footerRow}>
-        <div className={classes.footerSpacer}></div>
-        <div className={classes.footerBox}></div>
+        <div className={classes.footerBackground}>
+          <div className={classes.footerSpacer}></div>
+          <div className={classes.footerBox}></div>
+        </div>
         <div className={classes.slider}>
           <Slider {...settings}>
-            <div> {/* Needed to escape element.style display=inline-block from the slider package*/}
-              <div className={classes.quoteRow}>
-                <div className={classes.quoteImageWrapper}>
-                  <DiscoveryImage src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
-                </div>
-                <div className={classes.quoteTextWrapper}>
-                  <div className={classes.quoteMarkWrapper}>
-                    <FormatQuoteIcon />
+            {props.content.images.map((image: IImage) => (
+              <div> {/* Needed to escape element.style display=inline-block from the slider package*/}
+                <div className={classes.quoteRow}>
+                  <div className={classes.quoteImageWrapper}>
+                    <DiscoveryImage src={image.src}></DiscoveryImage>
                   </div>
-                  <DiscoveryMarkdown
-                    source={props.content.firstQuote}
-                  ></DiscoveryMarkdown>
+                  <div className={classes.quoteTextWrapper}>
+                    <div className={classes.quoteMarkWrapper}>
+                      <FormatQuoteIcon />
+                    </div>
+                    <div className={classes.quoteText}>
+                      {((quotes as IIndexable)[props.currentLanguage] as IIndexable)[image.name]}
+                      <br/><br/>
+                      {image.name}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <div className={classes.quoteRow}>
-                <div className={classes.quoteImageWrapper}>
-                  <DiscoveryImage width="30vw" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
-                </div>
-                <div className={classes.quoteTextWrapper}>
-                  <div className={classes.quoteMarkWrapper}>
-                    <FormatQuoteIcon />
-                  </div>
-                  <DiscoveryMarkdown
-                    source={props.content.secondQuote}
-                  ></DiscoveryMarkdown>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className={classes.quoteRow}>
-                <div className={classes.quoteImageWrapper}>
-                  < DiscoveryImage width="30vw" src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
-                </div>
-                <div className={classes.quoteTextWrapper}>
-                  <div className={classes.quoteMarkWrapper}>
-                    <FormatQuoteIcon />
-                  </div>
-                  <DiscoveryMarkdown
-                    source={props.content.thirdQuote}
-                  ></DiscoveryMarkdown>
-                </div>
-              </div>
-            </div>
+            ))}
           </Slider>
         </div>
       </div>
@@ -290,14 +279,23 @@ class HomePage extends React.Component<IProps, IHome> {
   state = {
     content: {
       mainContent: "",
-      firstQuote: "",
-      secondQuote: "",
-      thirdQuote: "",
+      images: [],
     },
     translation: {},
+    currentLanguage: ""
   };
 
+  importAll(r: __WebpackModuleApi.RequireContext): IImage[] {
+    return r.keys().map((fileName: string) => ({
+      src: r(fileName).default, name: fileName.replace(/\.(png|jpe?g|svg)$/, "").replace(/.\//, ""),
+    }));
+  }
+
   componentDidMount = async () => {
+    const images: any = this.importAll(
+      require.context("../../assets/home/quotes", false, /\.(png|jpe?g|svg)$/)
+    );
+    this.setState({ content: { ...this.state.content, images } });
     await this.fetchContent();
   };
 
@@ -309,23 +307,12 @@ class HomePage extends React.Component<IProps, IHome> {
     const responseMain = await fetch(
       `pages/${this.props.currentLanguage}/home/mainContent.md`
     );
-    const responseFirst = await fetch(
-      `pages/${this.props.currentLanguage}/home/firstQuote.md`
-    );
-    const responseSecond = await fetch(
-      `pages/${this.props.currentLanguage}/home/secondQuote.md`
-    );
-    const responseThird = await fetch(
-      `pages/${this.props.currentLanguage}/home/thirdQuote.md`
-    );
 
     const mainContent = await responseMain.text();
-    const firstQuote = await responseFirst.text();
-    const secondQuote = await responseSecond.text();
-    const thirdQuote = await responseThird.text();
+
 
     this.setState({
-      content: { mainContent, firstQuote, secondQuote, thirdQuote },
+      content: { ...this.state.content, mainContent },
     });
   };
 
@@ -334,6 +321,7 @@ class HomePage extends React.Component<IProps, IHome> {
       <HomeContent
         content={this.state.content}
         translation={this.props.translation}
+        currentLanguage={this.props.currentLanguage}
       />
     );
   }
