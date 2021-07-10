@@ -1,6 +1,6 @@
 import React, { ReactFragment, ReactNode } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 type Props = {
   children: ReactNode;
@@ -44,14 +44,14 @@ export default function DiscoveryButton(props: Props) {
 
   return props.to ? (
     props.nav ? (
-      <Link to={props.to}>
+      <NavLink to={props.to}>
         <button
           className={props.active ? classes.activeButton : classes.button}
           onClick={props.onClick}
         >
           {props.children}
         </button>
-      </Link>
+      </NavLink>
     ) : (
       <a href={props.to} target="_blank">
         <button

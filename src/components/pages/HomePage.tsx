@@ -214,7 +214,7 @@ const HomeContent: React.FC<IHome> = (props) => {
         <div className={classes.mainWrapper}>
           <div className={classes.mainBox}></div>
           <div className={classes.participateButton}>
-            <DiscoveryButton to="/participate">
+            <DiscoveryButton nav={true} to="/participate">
               {t.tabs.participate}
             </DiscoveryButton>
           </div>
