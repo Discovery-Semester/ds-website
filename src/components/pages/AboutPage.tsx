@@ -1,18 +1,28 @@
 import { createStyles, makeStyles, Theme } from "@material-ui/core";
 import React from "react";
+import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import { IApplicationState } from "../../store/reducers/Store";
 import DiscoveryTextHeader from "../generic/DiscoveryTextHeader";
 import DiscoveryMarkdown from "../generic/DiscoveryMarkdown";
 import DiscoveryTeamMember from "../generic/DiscoveryTeamMember";
 import constants from "../../utils/constants";
-
-
+import quotes from "../../assets/team/quotes"
 interface IAbout {
   content: {
     mainContent: string;
+    images: any;
   };
   translation: any;
+}
+
+interface IImage {
+  src: string;
+  name: string;
+}
+
+interface IIndexable {
+  [key: string]: string;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -32,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
       gap: "10px 5%",
-      padding: "5% 10% 5% 10%"
+      padding: "5% 10% 5% 10%",
     },
     contactBox: {
       fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
@@ -43,14 +53,14 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "black",
       textDecoration: "none",
       transition: "color 0.2s ease-in-out",
-      '&:hover' : {
+      "&:hover": {
         color: "rgb(100, 100, 100)",
-      }
+      },
     },
     [theme.breakpoints.down("sm")]: {
       contactBox: {
         gridColumn: "span 1/ auto",
-        paddingRight: "5%"
+        paddingRight: "5%",
       },
       membersGrid: {
         gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr)))",
@@ -58,7 +68,7 @@ const useStyles = makeStyles((theme: Theme) =>
       headerContentWrapper: {
         columnCount: 1,
       },
-    }
+    },
   })
 );
 
@@ -75,52 +85,20 @@ const AboutContent: React.FC<IAbout> = (props) => {
         ></DiscoveryMarkdown>
       </div>
       <div className={classes.membersGrid}>
-        <DiscoveryTeamMember
-          src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-          name="Amrita"
-        >
-          "Chemist by training but considering becoming a chef so I can at least
-          eat my products"
-        </DiscoveryTeamMember>
-        <DiscoveryTeamMember
-          src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-          name="Amrita"
-        >
-          "Chemist by training but considering becoming a chef so I can at least
-          eat my products"
-        </DiscoveryTeamMember>
-        <DiscoveryTeamMember
-          src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-          name="Amrita"
-        >
-          "Chemist by training but considering becoming a chef so I can at least
-          eat my products"
-        </DiscoveryTeamMember>
-        <DiscoveryTeamMember
-          src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-          name="Amrita"
-        >
-          "Chemist by training but considering becoming a chef so I can at least
-          eat my products"
-        </DiscoveryTeamMember>
-        <DiscoveryTeamMember
-          src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-          name="Amrita"
-        >
-          "Chemist by training but considering becoming a chef so I can at least
-          eat my products"
-        </DiscoveryTeamMember>
-        <DiscoveryTeamMember
-          src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-          name="Amrita"
-        >
-          "Chemist by training but considering becoming a chef so I can at least
-          eat my products"
-        </DiscoveryTeamMember>
-        <div className={classes.contactBox}> 
+        {props.content.images.map((image: IImage) => (
+          <DiscoveryTeamMember
+            src={image.src}
+            name={image.name}>{(quotes as IIndexable)[image.name]}</DiscoveryTeamMember>
+        ))}
+        <div className={classes.contactBox}>
           {t.about.contact}
           <br />
-          <a href={"mailto:" + constants.links.contact} className={classes.contactLink}>→ {constants.links.contact}</a>
+          <a
+            href={"mailto:" + constants.links.contact}
+            className={classes.contactLink}
+          >
+            → {constants.links.contact}
+          </a>
         </div>
       </div>
     </div>
@@ -136,11 +114,23 @@ class AboutPage extends React.Component<IProps, IAbout> {
   state = {
     content: {
       mainContent: "",
+      images: [],
     },
     translation: {},
   };
 
+
+  importAll(r: __WebpackModuleApi.RequireContext): IImage[] {
+    return r.keys().map((fileName: string) => ({
+      src: r(fileName).default, name: fileName.replace(/\.(png|jpe?g|svg)$/, "").replace(/.\//, ""),
+    }));
+  }
+
   componentDidMount = async () => {
+    const images: any = this.importAll(
+      require.context("../../assets/team", false, /\.(png|jpe?g|svg)$/)
+    );
+    this.setState({ content: { ...this.state.content, images } });
     await this.fetchContent();
   };
 
@@ -156,7 +146,7 @@ class AboutPage extends React.Component<IProps, IAbout> {
     const mainContent = await responseMain.text();
 
     this.setState({
-      content: { mainContent },
+      content: { ...this.state.content, mainContent },
     });
   };
   render() {
