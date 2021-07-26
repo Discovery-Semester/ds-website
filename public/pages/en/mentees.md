@@ -25,8 +25,7 @@ You've come to the right place!
 
 **Here you can sign up for the program:**
 
-Just fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLScqlNL28YcNBblMdOoIQpe8rqwPojdJ7C9td6YXXM0u4I023g/viewform?usp=sf_link). The number of participants is limited unfortunately, a registration is no guarantee yet that you can participate. Will will contact you for the next steps.  
-Registration deadline is 4 July 2021 - please register early if you can.
+Registration for autumn semester 2021 has finished. Once there is info for future ones, they will appear here.
 
 **Do you have any questions? Contact us!**  
 [contact@discovery-semester.ch](mailto:contact@discovery-semester.ch)
