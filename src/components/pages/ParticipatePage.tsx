@@ -14,6 +14,8 @@ import DiscoveryImage from "../generic/DiscoveryImage";
 import DiscoveryMarkdown from "../generic/DiscoveryMarkdown";
 import constants from "../../utils/constants";
 
+import topImg from "../../assets/participate/topImg.jpg"
+
 interface IParticipate {
   content: {
     topContent: string;
@@ -209,7 +211,7 @@ const ParticipateContent: React.FC<IParticipate> = (props) => {
           <DiscoveryMarkdown source={props.content.topContent} />
         </div>
         <div className={classes.topImageWrapper}>
-          <DiscoveryImage src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></DiscoveryImage>
+          <DiscoveryImage src={topImg}></DiscoveryImage>
         </div>
       </div>
       <div className={classes.participateRow}>
