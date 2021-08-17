@@ -17,6 +17,8 @@ import { toggleSideDrawer } from "../../store/actions/uiActionCreator";
 
 const useStyles = makeStyles((theme) => createStyles({
   homeButton: {
+    padding: theme.spacing(1),
+    marginTop: "5px",
     marginLeft: theme.spacing(0),
     marginRight: theme.spacing(0),
     "&:hover": {
@@ -24,6 +26,8 @@ const useStyles = makeStyles((theme) => createStyles({
     },
   },
   logoButton: {
+    marginTop: "5px",
+    padding: theme.spacing(1),
     marginLeft: -theme.spacing(2),
     marginRight: theme.spacing(2),
     "&:hover": {
@@ -75,17 +79,13 @@ const Header = (props) => {
           width: isBigScreen ? "80%" : "100%",
         }}
       >
-        <IconButton
-          edge="start"
+        <a
           className={isBigScreen ? classes.homeButton : classes.logoButton}
-          size="medium"
-          color="inherit"
-          aria-label="menu"
         >
           <NavLink to="/">
             <img className={classes.logoImage} src={logo} alt="logo" />
           </NavLink>
-        </IconButton>
+        </a>
 
         {isBigScreen ? (
           <Aux>
