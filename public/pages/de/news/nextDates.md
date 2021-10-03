@@ -1,3 +1,5 @@
-- 15 Mai abschluss
+- 12. Oktober 2021: Sportanlass
 
-- 15 August 2021 Sommergrillieren
+- 18. November 2021: Spieleabend
+
+- 8. Dezember 2021: Internationales Dinner
