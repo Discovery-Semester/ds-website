@@ -252,10 +252,10 @@ const ParticipateContent: React.FC<IParticipate> = (props) => {
           <div className={classes.mainRowButton}>
             {
               menteeMentor == "mentee" ?
-              <DiscoveryButton nav={false} to={t.participate.signUpMenteeURL}>
+              <DiscoveryButton disabled={!t.participate.signUpMenteeURL} nav={false} to={t.participate.signUpMenteeURL}>
                 {t.participate.signUpMentee}
               </DiscoveryButton> :
-              <DiscoveryButton disabled={true} nav={false} to={t.participate.signUpMentorURL}>
+              <DiscoveryButton disabled={!t.participate.signUpMentorURL} nav={false} to={t.participate.signUpMentorURL}>
                 {t.participate.signUpMentor}
               </DiscoveryButton>
             }
