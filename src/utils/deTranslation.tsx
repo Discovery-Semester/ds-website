@@ -20,7 +20,7 @@ export default {
     instagram: "Discovery Semester on Instagram",
   },
   news: {
-    title: "News from the Discovery Semester",
+    title: "Neuigkeiten vom Discovery Semester",
     next_dates: "Unsere nächsten Anlässe",
     instagram: "Discovery Semester on Instagram",
   },
