@@ -26,7 +26,7 @@ export default {
   },
   participate: {
     title: "Was ist das Discovery Semester?",
-    redBoxTitle: "Nimma am Discovery Semester teil",
+    redBoxTitle: "Nimm am Discovery Semester teil",
     redBoxMentee: "Entdecke das Studieren an der ETH als Mentee",
     redBoxMentor: "Hilf einer geflüchteten Person als MentorIn",
     redBoxMenteeButton: "Werde Mentee",
