@@ -7,7 +7,8 @@ type Props = {
   to?: string;
   nav?: boolean;
   onClick?: () => void;
-  active?: boolean;
+  focus?: boolean;
+  disabled?: boolean;
 };
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
         boxShadow: "0 0" + theme.color.red500,
       },
     },
-    activeButton: {
+    focusButton: {
       border: "2px solid " + theme.color.red500,
       padding: "6px 9px 6px 10px",
       fontWeight: 600,
@@ -36,17 +37,29 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "white",
       fontSize: "1.25rem",
     },
+    inactiveButton: {
+      border: "2px solid " + theme.color.grey500,
+      padding: "6px 9px 6px 10px",
+      backgroundColor: theme.color.grey300,
+      color: "grey",
+      fontSize: "1.25rem",
+      fontStyle: "italic",
+    },
   })
 );
 
 export default function DiscoveryButton(props: Props) {
   const classes = useStyles();
 
-  return props.to ? (
+  return props.disabled ? (
+    <button disabled className={classes.inactiveButton}>
+      {props.children}
+    </button>
+  ) : props.to ? (
     props.nav ? (
       <NavLink to={props.to}>
         <button
-          className={props.active ? classes.activeButton : classes.button}
+          className={props.focus ? classes.focusButton : classes.button}
           onClick={props.onClick}
         >
           {props.children}
@@ -55,7 +68,7 @@ export default function DiscoveryButton(props: Props) {
     ) : (
       <a href={props.to} target="_blank">
         <button
-          className={props.active ? classes.activeButton : classes.button}
+          className={props.focus ? classes.focusButton : classes.button}
           onClick={props.onClick}
         >
           {props.children}
@@ -64,7 +77,7 @@ export default function DiscoveryButton(props: Props) {
     )
   ) : (
     <button
-      className={props.active ? classes.activeButton : classes.button}
+      className={props.focus ? classes.focusButton : classes.button}
       onClick={props.onClick}
     >
       {props.children}

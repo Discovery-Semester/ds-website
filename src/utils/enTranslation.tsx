@@ -33,7 +33,7 @@ export default {
     signUpMenteeURL: "https://forms.gle/iRryybmrG1mvVrb16",
     signUpMentorURL: "https://forms.gle/8CGnYF7qr3vh1cWc8",
     signUpMentee: "Sign up as Mentee here",
-    signUpMentor: "Sign up as Mentor here",
+    signUpMentor: "You will find a link to sign up here when registration is open again",
     questions: "Do you have questions? Write to us!",
   },
   about: {

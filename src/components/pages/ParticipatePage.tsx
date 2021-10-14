@@ -223,7 +223,7 @@ const ParticipateContent: React.FC<IParticipate> = (props) => {
             <div className={classes.participateRowText}>
               {t.participate.redBoxMentee}
             </div>
-            <DiscoveryButton active={menteeMentor == "mentee"} onClick={() => setMenteeMentor("mentee")}>
+            <DiscoveryButton focus={menteeMentor == "mentee"} onClick={() => setMenteeMentor("mentee")}>
               {t.participate.redBoxMenteeButton}
             </DiscoveryButton>
           </div>
@@ -232,7 +232,7 @@ const ParticipateContent: React.FC<IParticipate> = (props) => {
             <div className={classes.participateRowText}>
               {t.participate.redBoxMentor}
             </div>
-            <DiscoveryButton active={menteeMentor == "mentor"} onClick={() => setMenteeMentor("mentor")}>
+            <DiscoveryButton focus={menteeMentor == "mentor"} onClick={() => setMenteeMentor("mentor")}>
               {t.participate.redBoxMentorButton}
             </DiscoveryButton>
           </div>
@@ -255,7 +255,7 @@ const ParticipateContent: React.FC<IParticipate> = (props) => {
               <DiscoveryButton nav={false} to={t.participate.signUpMenteeURL}>
                 {t.participate.signUpMentee}
               </DiscoveryButton> :
-              <DiscoveryButton nav={false} to={t.participate.signUpMentorURL}>
+              <DiscoveryButton disabled={true} nav={false} to={t.participate.signUpMentorURL}>
                 {t.participate.signUpMentor}
               </DiscoveryButton>
             }
