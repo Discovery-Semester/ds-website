@@ -4,6 +4,8 @@
 
 Lives in language specific sub-directories of `./public/pages` as markdown files.
 
+Some smaller text snippets (headings, ...) live in `./src/utils/enTranslations.tsx` respectively `./src/utils/deTranslations.tsx`. The sign-up link becomes disabled if the `signUpMenteeURL` respectively `signUpMentorURL` is empty.
+
 ### Building
 
 It's a react page built with yarn:
