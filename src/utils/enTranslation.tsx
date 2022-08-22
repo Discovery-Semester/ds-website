@@ -30,10 +30,12 @@ export default {
     redBoxMentor: "Help a refugee with your knowledge as a mentor",
     redBoxMenteeButton: "Become a Mentee",
     redBoxMentorButton: "Become a Mentor",
-    signUpMenteeURL: "",
-    signUpMentorURL: "",
-    signUpMentee: "You will find a link to sign up here when registration is open again",
-    signUpMentor: "You will find a link to sign up here when registration is open again",
+    signUpMenteeURL: "https://docs.google.com/forms/d/e/1FAIpQLSdlOr6LkfwXK7xICrWekBCl8SAYNUSPWW9WZ8MftXuG2YZFYQ/viewform?usp=sf_link",
+    signUpMentorURL: "https://docs.google.com/forms/d/e/1FAIpQLSfELYfxBgb2WZjixBkUa0olKvpN7L-G2ACDvqc7pqxs8-pASQ/viewform?usp=sf_link",
+    /* signUpMentee: "You will find a link to sign up here when registration is open again",
+* signUpMentor: "You will find a link to sign up here when registration is open again", */
+    signUpMentee: "Sign up for the Autumn semester 2022 here",
+    signUpMentor: "Sign up for the Autumn semester 2022 here",
     questions: "Do you have questions? Write to us!",
   },
   about: {
